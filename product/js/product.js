@@ -1,5 +1,10 @@
+/**
+ * 页面加载事件
+ */
 $(function() {
+	//初始化table
 	initialTable();
+
 })
 
 /**

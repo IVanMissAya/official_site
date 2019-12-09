@@ -1,0 +1,89 @@
+.headerNav {
+	width: 100%;
+	position: relative;
+}
+
+.headerNav_scroll {
+	background-color: #EFEEEF;
+	position: fixed;
+	top: 0;
+	color: #4D4D4D;
+	z-index: 15;
+}
+
+.nav_title {
+	width: 80%;
+	height: 15vh;
+	margin: 0px auto;
+	padding-left: 3%;
+	padding-right: 3%;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #fff;
+}
+
+.logoIcon {
+	width: 5.1vw;
+	height: 9vh;
+}
+
+.logoIcon_scroll {
+	width: 58px;
+	height: 51px;
+}
+
+.rightNavList {
+	height: 26px;
+	line-height: 26px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.nav_title_scroll {
+	height: 80px;
+	border: none;
+}
+
+
+
+.rightNavList ul {
+	height: 100%;
+}
+
+.rightNavList ul li {
+	float: left;
+	font-family: DIN-Medium;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+}
+
+.navLi:hover {
+	cursor: pointer;
+}
+
+.navSec {
+	width: 100px;
+	text-align: center;
+}
+
+.navLi {
+	width: 100px;
+	text-align: center;
+}
+
+.navLine {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.checkedNav {
+	width: 116px;
+	height: 26px;
+	color: #fff;
+	background-color: #DA241D;
+	border-radius: 15px;
+}

@@ -1,0 +1,321 @@
+.navArea {
+	width: 100%;
+	/* height: 860px; */
+	height: 60vh;
+	color: #fff;
+	position: relative;
+	background: url(../../asset/img/contact_1.png);
+	background-repeat: no-repeat;
+	/* background-size: 100% 100% center center; */
+}
+
+
+.desText {
+	width: 75%;
+	margin: 0px auto;
+	margin-top: 8%;
+}
+
+.topDesText {
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.bottomDesText {
+	font-size: 40px;
+	margin-top: 3%;
+}
+
+.stuffDetail {
+	width: 50%;
+	margin: 0px auto;
+	padding-bottom: 3%;
+	padding-top: 3%;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.singleStuff {
+	align-items: center;
+}
+
+.stuffTitle {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.stuffText {
+	font-size: 15px;
+	margin-top: 5px;
+}
+
+.stuffImg {
+	margin-top: 15px;
+}
+
+.stuffTool {
+	width: 70%;
+	margin-top: 15px;
+	justify-content: space-around;
+}
+
+.languageText {
+	color: #868686;
+}
+
+.languageText:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.checkStyle {
+	color: #fff;
+}
+
+.tool {
+	color: #2DA5FF;
+}
+
+.tool:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.bottomSensor {
+	position: relative;
+	width: 100%;
+	height: 90vh;
+	background-color: #F6F4F3;
+}
+
+.sensorArea {
+	width: 62%;
+	margin: 0px auto;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.sensorIcon {
+	/* width: 580px; */
+	width: 100%;
+}
+
+.stuffIcon {
+	width: 90%;
+}
+
+.sensorTitle {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.sensorTable {
+	width: 420px;
+	margin-top: 15px;
+}
+
+.sensorTable table {
+	width: 100%;
+}
+
+.sensorTable table tr td {
+	border: 1px solid #E7E6E7;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 1em;
+}
+
+/*设置奇数行颜色*/
+.sensorTable table tr:nth-child(odd) {
+	background: #fff;
+}
+
+/*设置偶数行颜色*/
+.sensorTable table tr:nth-child(even) {
+	background: #F5F4F5;
+}
+
+.sensorName {
+	color: #2562AB;
+}
+
+.sensorDetail {
+	margin-left: 60px;
+}
+
+.sensorText {
+	margin-top: 8px;
+}
+
+.strongText {
+	font-weight: bold;
+}
+
+
+.contactTitle {
+	position: absolute;
+	font-size: 40px;
+	right: 30%;
+	bottom: 30%;
+}
+
+.contactCard {
+	width: 60%;
+	margin: 0px auto;
+	padding-bottom: 5%;
+	background-color: #fff;
+	margin-top: -12%;
+	border-radius: 10px;
+	position: absolute;
+	top: 70%;
+	left: 21%;
+	z-index: 11;
+}
+
+.top_insideCard {
+	width: 70%;
+	margin: 0px auto;
+}
+
+.cardTitle {
+	margin-top: 10%;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.titleLine {
+	width: 60px;
+	height: 3px;
+	background-color: red;
+	margin-top: 1%;
+}
+
+.singleInput {
+	width: 45%;
+}
+
+
+.inputTitle {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.singleCardRow {
+	width: 100%;
+	margin-top: 10%;
+	justify-content: space-between;
+}
+
+.inputValueArea {
+	margin-top: 15px;
+}
+
+.inputValueArea {
+	color: #979797;
+	font-size: 15px;
+	white-space: nowrap;
+}
+
+.inputLine {
+	width: 100%;
+	height: 1px;
+	margin-top: 30px;
+	background-color: #E4E4E4;
+}
+
+.textInput input {
+	font-size: 16px;
+	border: none;
+	background: transparent;
+}
+
+.messageCard {
+	width: 80%;
+	margin: 0px auto;
+	margin-top: 8%;
+	align-items: center;
+	justify-content: center;
+}
+
+.messageTitle {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.msgRow {
+	width: 100%;
+	margin-top: 8%;
+	justify-content: space-between;
+}
+
+.singleArea {
+	width: 28%;
+}
+
+.titleText {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.textInput {
+	margin-top: 15px;
+}
+
+.inputDepart {
+	width: 100%;
+	height: 1px;
+	margin-top: 20px;
+	background-color: #E4E4E4;
+}
+
+.titleOption {
+	width: 100%;
+	text-align: left;
+	margin-top: 5%;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.leaveMsg {
+	width: 100%;
+	height: 180px;
+	margin-top: 2%;
+	border: 1px solid #DEDEDE;
+	background-color: #F6F4F3;
+}
+
+.leaveMsg textarea {
+	width: 98%;
+	height: 90%;
+	margin-top: 1%;
+	margin-left: 1%;
+	border: none;
+	background: transparent;
+	resize: none;
+}
+
+.submitArea {
+	width: 20%;
+	height: 60px;
+	line-height: 60px;
+	margin-top: 5%;
+	border-radius: 40px;
+	text-align: center;
+	background-color: #CD2922;
+}
+
+.submitArea button {
+	color: #fff;
+	border: none;
+	background: transparent;
+}
+
+.mapArea {
+	width: 100%;
+	height: 60vh;
+}
+
+#gcontainer {
+	width: 100%;
+	height: 100%;
+}

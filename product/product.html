@@ -10,6 +10,8 @@
 		<link href="../asset/layui/css/layui.css" rel="stylesheet" media="all" />
 		<link href="../asset/css/animate.min.css" rel="stylesheet" />
 		<link href="../asset/css/common.css" rel="stylesheet" media="screen" />
+		<link href="../asset/css/header.css" rel="stylesheet" media="screen" />
+		<link href="../asset/css/footer.css" rel="stylesheet" media="screen" />
 		<link href="css/product.css" rel="stylesheet" media="screen" />
 		<link href="../asset/img/logo.png" rel="shortcut icon">
 	</head>
@@ -17,32 +19,36 @@
 		<div class="container">
 			<!-- 列表导航栏 -->
 			<div class="navArea">
-				<div class="row nav_title">
-					<div class="left_logo_area">
-						<img src="../asset/img/product_logo.png" class="logoIcon">
-					</div>
-					<div class="rightNavList">
-						<ul>
-							<li class="navLi checkedNav">HOME</li>
-							<li class="navLine">|</li>
-							<li class="navLi">PRODUCTS</li>
-							<li class="navLine">|</li>
-							<li class="navLi">CONTACT</li>
-							<li class="navLine">|</li>
-							<li class="navSec"><span data-type="CH-ZN" class="languageText checkStyle">中文</span>&nbsp;/&nbsp;<span data-type="ENG"
-								 class="languageText ">EN</span></li>
-							<li class="navLine">|</li>
-							<li class="navSec">
-								<img src="../asset/img/sousuo_product.png" class="searchIcon" />
-							</li>
-						</ul>
+				<!-- 头部 -->
+				<div class="headerNav">
+					<div class="row nav_title">
+						<div class="left_logo_area">
+							<img src="../asset/img/logo.png" class="logoIcon navLogo">
+						</div>
+						<div class="rightNavList">
+							<ul>
+								<li class="navLi " data-index="home">HOME</li>
+								<li class="navLine">|</li>
+								<li class="navLi checkedNav" data-index="product">PRODUCTS</li>
+								<li class="navLine">|</li>
+								<li class="navLi" data-index="contact">CONTACT</li>
+								<li class="navLine">|</li>
+								<li class="navSec"><span data-type="CH-ZN" class="languageText checkStyle">中文</span>&nbsp;/&nbsp;<span
+									 data-type="ENG" class="languageText ">EN</span></li>
+								<li class="navLine">|</li>
+								<li class="navSec">
+									<img src="../asset/img/sousuo.png" class="searchIcon" />
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
+
 				<div class="row desText">
-					<div class="productIconArea">
+					<div class="productIconArea uncheck">
 						<img src="../asset/img/product_1.png" class="productIcon" />
 					</div>
-					<div class="productIconArea">
+					<div class="productIconArea uncheck">
 						<img src="../asset/img/product_2.png" class="productIcon" />
 					</div>
 				</div>
@@ -56,6 +62,7 @@
 					</tr>
 				</table>
 			</div>
+			<!-- 底部 -->
 			<div class="bottomTip">
 				<div class="column tipArea">
 					<div class="logoTip">
@@ -78,8 +85,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="icpArea">Copyright @ 2020 inteagle All Rights Reserved</div>
+				<div class="icpArea">Copyright © 2020 inteagle All Rights Reserved</div>
 			</div>
+
 		</div>
 		<script src="../asset/layui/layui.js" type="text/javascript"></script>
 		<script src="../asset/js/jquery-3.2.1.min.js" type="text/javascript"></script>
