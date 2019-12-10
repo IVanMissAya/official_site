@@ -23,18 +23,18 @@
 				<div class="headerNav">
 					<div class="row nav_title">
 						<div class="left_logo_area">
-							<img src="../asset/img/logo.png" class="logoIcon navLogo">
+							<img src="../asset/img/product_logo.png" class="logoIcon navLogo">
 						</div>
 						<div class="rightNavList">
 							<ul>
-								<li class="navLi " data-index="home">HOME</li>
+								<li class="navLi " data-locale="home" data-index="home">HOME</li>
 								<li class="navLine">|</li>
-								<li class="navLi checkedNav" data-index="product">PRODUCTS</li>
+								<li class="navLi checkedNav" data-locale="products" data-index="product">PRODUCTS</li>
 								<li class="navLine">|</li>
-								<li class="navLi" data-index="contact">CONTACT</li>
+								<li class="navLi" data-locale="contact" data-index="contact">CONTACT</li>
 								<li class="navLine">|</li>
-								<li class="navSec"><span data-type="CH-ZN" class="languageText checkStyle">中文</span>&nbsp;/&nbsp;<span
-									 data-type="ENG" class="languageText ">EN</span></li>
+								<li class="navSec"><span data-type="zh" class="languageText checkStyle">中文</span>&nbsp;/&nbsp;<span data-type="en"
+									 class="languageText ">EN</span></li>
 								<li class="navLine">|</li>
 								<li class="navSec">
 									<img src="../asset/img/sousuo.png" class="searchIcon" />
@@ -71,17 +71,17 @@
 					<div class="row leftTipNav">
 						<div class="bottomNav">
 							<ul>
-								<li class="hoverText">Home</li>
+								<li class="hoverText" data-locale="home">Home</li>
 								<li class="bottomNavLine">|</li>
-								<li class="hoverText">PRODUCTS</li>
+								<li class="hoverText" data-locale="products">PRODUCTS</li>
 								<li class="bottomNavLine">|</li>
-								<li class="hoverText">CONTACT</li>
+								<li class="hoverText" data-locale="contact">CONTACT</li>
 							</ul>
 						</div>
 						<div class="column mentionArea">
-							<div class="addressText">ADDRESS:Cloud Computing Center Building</div>
-							<div class="emailText">E-mail : sale@saf.com</div>
-							<div class="mobileText">MOBILE:137-2478-6782</div>
+							<div class="addressText" data-locale="ADDRESS">ADDRESS:Cloud Computing Center Building</div>
+							<div class="emailText" data-locale="EMAIL">E-mail : sale@saf.com</div>
+							<div class="mobileText" data-locale="MOBILE">MOBILE:137-2478-6782</div>
 						</div>
 					</div>
 				</div>
@@ -91,13 +91,15 @@
 		</div>
 		<script src="../asset/layui/layui.js" type="text/javascript"></script>
 		<script src="../asset/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<!-- 加载语言包文件 -->
+		<script src="../i18n/jquery.i18n.properties.js"></script>
 		<script src="../asset/js/common.js" type="text/javascript"></script>
 		<script src="js/product.js" type="text/javascript"></script>
 		<script type="text/template" id="tableTr">
 			<tr>
-				<td class="col_1 fontStyle">[text1]</td>
-				<td class="col_2">[text2]</td>
-				<td class="col_3">[text3]</td>
+				<td class="col_1 fontStyle" data-locale=[colText_1]>[text1]</td>
+				<td class="col_2" data-locale=[colText_2]>[text2]</td>
+				<td class="col_3" data-locale=[colText_3]>[text3]</td>
 			</tr>
 		</script>
 	</body>

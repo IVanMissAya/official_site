@@ -12,6 +12,10 @@
 	border-radius: 15px;
 }
 
+.nav_title {
+	border-bottom: 1px solid #D6D6D6;
+}
+
 .desText {
 	width: 80%;
 	height: 81%;
@@ -31,6 +35,7 @@
 .productIcon {
 	width: 90%;
 }
+
 .bottomSensor {
 	width: 100%;
 	background-color: #F7F7F7;
@@ -47,8 +52,7 @@
 	border: 1px solid #E7E6E7;
 	height: 40px;
 	line-height: 40px;
-	text-indent: 1em;
-	font-size: 15px;
+	text-indent: 2em;
 	white-space: nowrap;
 }
 
@@ -64,23 +68,45 @@
 
 .col_1 {
 	width: 25%;
+	font-family: DIN-Medium;
+	font-size: 17px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+
 }
 
 .col_2 {
 	width: 35%;
 	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #3c3c3c;
 }
 
 .col_3 {
 	width: 40%;
 	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #3c3c3c;
 }
 
 .fontStyle {
-	color: #2562AB;
+	color: #2158a2;
 }
 
 .boldStyle {
 	font-size: 18px;
 	font-weight: bold;
+}
+
+.languageText {
+	color: #6B6B6B;
 }

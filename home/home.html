@@ -9,6 +9,7 @@
 		<meta http-equiv="Cache-Control" content="max-age=600" />
 		<link href="../asset/layui/css/layui.css" rel="stylesheet" media="all" />
 		<link href="../asset/css/animate.min.css" rel="stylesheet" />
+		<link href="../asset/css/aos.css" rel="stylesheet" media="screen" />
 		<link href="../asset/css/common.css" rel="stylesheet" media="screen" />
 		<link href="../asset/css/header.css" rel="stylesheet" media="screen" />
 		<link href="../asset/css/footer.css" rel="stylesheet" media="screen" />
@@ -16,7 +17,7 @@
 		<link href="../asset/img/logo.png" rel="shortcut icon">
 	</head>
 	<body>
-		<div class="container">
+		<div class="container" >
 			<!-- 列表导航栏 -->
 			<div class="navArea">
 				<!-- 头部 -->
@@ -27,14 +28,14 @@
 						</div>
 						<div class="rightNavList">
 							<ul>
-								<li class="navLi checkedNav" data-index="home">HOME</li>
+								<li class="navLi  checkedNav" data-locale="home" data-index="home"></li>
 								<li class="navLine">|</li>
-								<li class="navLi" data-index="product">PRODUCTS</li>
+								<li class="navLi" data-locale="products" data-index="product"></li>
 								<li class="navLine">|</li>
-								<li class="navLi" data-index="contact">CONTACT</li>
+								<li class="navLi" data-locale="contact" data-index="contact"></li>
 								<li class="navLine">|</li>
-								<li class="navSec"><span data-type="CH-ZN" class="languageText checkStyle">中文</span>&nbsp;/&nbsp;<span
-									 data-type="ENG" class="languageText ">EN</span></li>
+								<li class="navSec"><span data-type="zh" class="languageText checkStyle">中文</span>&nbsp;/&nbsp;<span data-type="en"
+									 class="languageText ">EN</span></li>
 								<li class="navLine">|</li>
 								<li class="navSec">
 									<img src="../asset/img/sousuo.png" class="searchIcon" />
@@ -45,32 +46,32 @@
 				</div>
 
 				<div class="column desText">
-					<P class="topDesText">BIO-INSPIRED VISION</P>
-					<p class="bottomDesText">FOR MACHINES</p>
+					<P class="topDesText" data-locale="BIO-INSPIRED VISION">BIO-INSPIRED VISION</P>
+					<p class="bottomDesText" data-locale="FOR MACHINES">FOR MACHINES</p>
 				</div>
 			</div>
 			<!-- 详情 -->
 			<div class="row stuffDetail">
-				<div class="column singleStuff ">
+				<div class="column singleStuff aos-init aos-animate" data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-duration="600">
 					<div class="stuffTitle">DVS240</div>
-					<div class="stuffText">Discover event-based vision</div>
+					<div class="stuffText" data-locale="Discover event-based vision">Discover event-based vision</div>
 					<div class="stuffImg animated">
 						<img src="../asset/img/home_240.png" class="stuffIcon" />
 					</div>
 					<div class="row stuffTool">
-						<div class="tool">Learn more > </div>
-						<div class="tool">Buy > </div>
+						<div class="tool" data-locale="Learn more">Learn more > </div>
+						<div class="tool" data-locale="Buy">Buy > </div>
 					</div>
 				</div>
-				<div class="column singleStuff ">
+				<div class="column singleStuff aos-init aos-animate" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
 					<div class="stuffTitle">DAVIS346</div>
-					<div class="stuffText">Higher resolution and frame output</div>
+					<div class="stuffText" data-locale="Higher resolution and frame output">Higher resolution and frame output</div>
 					<div class="stuffImg animated">
 						<img src="../asset/img/home_346.png" class="stuffIcon" />
 					</div>
 					<div class="row stuffTool">
-						<div class="tool">Learn more > </div>
-						<div class="tool">Buy > </div>
+						<div class="tool" data-locale="Learn more">Learn more > </div>
+						<div class="tool" data-locale="Buy">Buy > </div>
 					</div>
 				</div>
 			</div>
@@ -80,32 +81,32 @@
 						<img src="../asset/img/home_sensor.png" class="sensorIcon" />
 					</div>
 					<div class="column sensorDetail">
-						<div class="sensorTitle">Sensor</div>
-						<div class="sensorText">
+						<div class="sensorTitle" data-locale="Sensor">Sensor</div>
+						<div class="sensorText" data-locale="sensorText">
 							<p>The neuromorphic <span class="strongText">Dynamic Vision Sensor</span> powers</p>
 							<p style="margin-top: 5px;">unprecedented pixel processing performance.</p>
 						</div>
 						<div class="sensorTable">
 							<table>
 								<tr>
-									<td class="sensorName">Ultra-low latency</td>
-									<td>below 0.1ms</td>
+									<td class="sensorName" data-locale="Ultra-low latency">Ultra-low latency</td>
+									<td class="sensorValue" data-locale="below 0.1ms">below 0.1ms</td>
 								</tr>
 								<tr>
-									<td class="sensorName">High dynamic range</td>
-									<td>above 120 dB</td>
+									<td class="sensorName" data-locale="High dynamic range">High dynamic range</td>
+									<td class="sensorValue" data-locale="above 120 dB">above 120 dB</td>
 								</tr>
 								<tr>
-									<td class="sensorName">Reduced data rate</td>
-									<td>save on bandwidth</td>
+									<td class="sensorName" data-locale="Reduced data rate">Reduced data rate</td>
+									<td class="sensorValue" data-locale="save on bandwidth">save on bandwidth</td>
 								</tr>
 								<tr>
-									<td class="sensorName">Low power consumption</td>
-									<td>up to 90% less</td>
+									<td class="sensorName" data-locale="Low power consumption">Low power consumption</td>
+									<td class="sensorValue" data-locale="lessPower">up to 90% less</td>
 								</tr>
 								<tr>
-									<td class="sensorName">Standard optics</td>
-									<td>use your exsting lenses</td>
+									<td class="sensorName" data-locale="Standard optics">Standard optics</td>
+									<td class="sensorValue" data-locale="use your exsting lenses">use your exsting lenses</td>
 								</tr>
 							</table>
 						</div>
@@ -121,17 +122,17 @@
 					<div class="row leftTipNav">
 						<div class="bottomNav">
 							<ul>
-								<li class="hoverText">Home</li>
+								<li class="hoverText" data-locale="home">Home</li>
 								<li class="bottomNavLine">|</li>
-								<li class="hoverText">PRODUCTS</li>
+								<li class="hoverText" data-locale="products">PRODUCTS</li>
 								<li class="bottomNavLine">|</li>
-								<li class="hoverText">CONTACT</li>
+								<li class="hoverText" data-locale="contact">CONTACT</li>
 							</ul>
 						</div>
 						<div class="column mentionArea">
-							<div class="addressText">ADDRESS:Cloud Computing Center Building</div>
-							<div class="emailText">E-mail : sale@saf.com</div>
-							<div class="mobileText">MOBILE:137-2478-6782</div>
+							<div class="addressText" data-locale="ADDRESS">ADDRESS:Cloud Computing Center Building</div>
+							<div class="emailText" data-locale="EMAIL">E-mail : sale@saf.com</div>
+							<div class="mobileText" data-locale="MOBILE">MOBILE:137-2478-6782</div>
 						</div>
 					</div>
 				</div>
@@ -141,6 +142,9 @@
 		</div>
 		<script src="../asset/layui/layui.js" type="text/javascript"></script>
 		<script src="../asset/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<script src="../asset/js/aos.js" type="text/javascript"></script>
+		<!-- 加载语言包文件 -->
+		<script src="../i18n/jquery.i18n.properties.js"></script>
 		<script src="../asset/js/common.js" type="text/javascript"></script>
 		<script src="js/home.js" type="text/javascript"></script>
 	</body>

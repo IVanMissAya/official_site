@@ -43,6 +43,7 @@
 }
 
 .singleStuff {
+	width: 45%;
 	align-items: center;
 }
 
@@ -56,7 +57,12 @@
 }
 
 .stuffText {
-	font-size: 15px;
+	font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #3c3c3c;
 	margin-top: 5px;
 }
 
@@ -70,22 +76,13 @@
 	justify-content: space-around;
 }
 
-.languageText {
-	color: #868686;
-}
-
-.languageText:hover {
-	cursor: pointer;
-	text-decoration: underline;
-}
-
-.checkStyle {
-	color: #fff;
-}
-
-
 .tool {
-	color: #2DA5FF;
+	font-family: MicrosoftYaHei;
+	font-size: 17px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #279cff;
 }
 
 .tool:hover {
@@ -113,12 +110,16 @@
 }
 
 .stuffIcon {
-	width: 90%;
+	width: 100%;
 }
 
 .sensorTitle {
-	font-size: 18px;
-	font-weight: bold;
+	font-family: DIN-Bold;
+	font-size: 26px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #3c3c3c;
 }
 
 .sensorTable {
@@ -148,17 +149,49 @@
 }
 
 .sensorName {
-	color: #2562AB;
+	font-family: DIN-Medium;
+	font-size: 17px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #2158a2;
+}
+
+.sensorValue {
+	font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #3c3c3c;
 }
 
 .sensorDetail {
 	margin-left: 60px;
+	font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #3c3c3c;
 }
 
 .sensorText {
 	margin-top: 8px;
+	font-family: MicrosoftYaHei;
+	font-size: 15px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #3c3c3c;
+
 }
 
 .strongText {
-	font-weight: bold;
+	font-family: MicrosoftYaHei-Bold;
+	font-size: 15px;
+	font-weight: 550;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #3c3c3c;
 }

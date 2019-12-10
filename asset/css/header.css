@@ -11,6 +11,20 @@
 	z-index: 15;
 }
 
+.languageText {
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #fff;
+}
+
+.languageText:hover {
+	cursor: pointer;
+	color: #DA241D;
+}
+
 .nav_title {
 	width: 80%;
 	height: 15vh;
@@ -23,8 +37,8 @@
 }
 
 .logoIcon {
-	width: 5.1vw;
-	height: 9vh;
+	width: 98px;
+	height: 87px;
 }
 
 .logoIcon_scroll {
@@ -46,8 +60,6 @@
 	border: none;
 }
 
-
-
 .rightNavList ul {
 	height: 100%;
 }
@@ -63,6 +75,11 @@
 
 .navLi:hover {
 	cursor: pointer;
+	width: 116px;
+	height: 26px;
+	color: #fff;
+	background-color: #DA241D;
+	border-radius: 15px;
 }
 
 .navSec {
@@ -71,7 +88,8 @@
 }
 
 .navLi {
-	width: 100px;
+	/* width: 100px; */
+	width: 116px;
 	text-align: center;
 }
 
@@ -86,4 +104,8 @@
 	color: #fff;
 	background-color: #DA241D;
 	border-radius: 15px;
+}
+
+.checkStyle {
+	color: #DA241D !important;
 }

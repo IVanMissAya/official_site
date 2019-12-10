@@ -26,10 +26,19 @@
 }
 
 .leftTipNav {
-	margin-top: 35px;
+	margin-top: 60px;
 	padding-bottom: 20px;
 	justify-content: space-between;
 	border-bottom: 2px solid #4B4B4B;
+}
+
+.hoverText {
+	font-family: DIN-Medium;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #ffffff;
 }
 
 .hoverText:hover {
@@ -40,6 +49,12 @@
 .mentionArea {
 	height: 75px;
 	justify-content: space-between;
+	font-family: MicrosoftYaHei;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #a6a6a6;
 }
 
 .bottomNavLine {
@@ -47,15 +62,14 @@
 	margin-right: 30px;
 }
 
-.mentionArea {
-	font-size: 14px;
-	font-weight: 500;
-	color: #AFAFAF;
-}
-
 .icpArea {
 	width: 62%;
 	margin: 0px auto;
 	margin-top: 10px;
-	color: #AFAFAF;
+	font-family: MicrosoftYaHei;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #a6a6a6;
 }

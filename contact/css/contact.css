@@ -59,19 +59,6 @@
 	justify-content: space-around;
 }
 
-.languageText {
-	color: #868686;
-}
-
-.languageText:hover {
-	cursor: pointer;
-	text-decoration: underline;
-}
-
-.checkStyle {
-	color: #fff;
-}
-
 .tool {
 	color: #2DA5FF;
 }
@@ -179,8 +166,12 @@
 
 .cardTitle {
 	margin-top: 10%;
-	font-size: 18px;
-	font-weight: bold;
+	font-family: DIN-Medium;
+	font-size: 21px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #000000;
 }
 
 .titleLine {
@@ -194,10 +185,13 @@
 	width: 45%;
 }
 
-
 .inputTitle {
-	font-size: 15px;
-	font-weight: bold;
+	font-family: DIN-Medium;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #000000;
 }
 
 .singleCardRow {
@@ -238,8 +232,12 @@
 }
 
 .messageTitle {
-	font-size: 18px;
-	font-weight: bold;
+	font-family: DIN-Medium;
+	font-size: 22px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #000000;
 }
 
 .msgRow {
@@ -253,8 +251,12 @@
 }
 
 .titleText {
-	font-size: 15px;
-	font-weight: bold;
+	font-family: DIN-Medium;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #000000;
 }
 
 .textInput {
@@ -272,8 +274,12 @@
 	width: 100%;
 	text-align: left;
 	margin-top: 5%;
-	font-size: 15px;
-	font-weight: bold;
+	font-family: DIN-Medium;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #000000;
 }
 
 .leaveMsg {
@@ -292,12 +298,17 @@
 	border: none;
 	background: transparent;
 	resize: none;
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #7f7f7f;
 }
 
 .submitArea {
 	width: 20%;
 	height: 60px;
-	line-height: 60px;
 	margin-top: 5%;
 	border-radius: 40px;
 	text-align: center;
@@ -305,9 +316,16 @@
 }
 
 .submitArea button {
-	color: #fff;
 	border: none;
 	background: transparent;
+	font-family: DIN-Medium;
+	font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #ffffff;
+	width: 100%;
+	height: 100%;
 }
 
 .mapArea {
