@@ -8,7 +8,7 @@
 	position: fixed;
 	top: 0;
 	color: #4D4D4D;
-	z-index: 15;
+	z-index: 25;
 }
 
 .languageText {
@@ -27,14 +27,16 @@
 
 .nav_title {
 	width: 80%;
-	height: 15vh;
+	height: 140px;
 	margin: 0px auto;
-	padding-left: 3%;
-	padding-right: 3%;
+	padding-left: 100px;
+	padding-right: 100px;
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid #fff;
+	transition: all .95s;
 }
+
 
 .logoIcon {
 	width: 98px;
@@ -80,6 +82,11 @@
 	color: #fff;
 	background-color: #DA241D;
 	border-radius: 15px;
+	-webkit-transition: all .95s;
+	-moz-transition: all .95s;
+	-ms-transition: all .95s;
+	-o-transition: all .95s;
+	transition: all .95s;
 }
 
 .navSec {
@@ -88,7 +95,6 @@
 }
 
 .navLi {
-	/* width: 100px; */
 	width: 116px;
 	text-align: center;
 }

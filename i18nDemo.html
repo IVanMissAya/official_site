@@ -1,0 +1,43 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>国际化</title>
+	</head>
+	<body>
+		<label data-locale="username">用户名：</label><input type="text">
+		<label data-locale="password">密码：</label><input type="password">
+		
+		<li class="navLi checkedNav" data-locale="home"  data-index="home">HOME</li>
+		
+		<select name="" id="lang" class="form-control header-lang">
+			<option checked value="zh">中文</option>
+			<option value="en">English</option>
+		</select>
+		<script src="asset/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<!-- 加载语言包文件 -->
+		<script src="i18n/jquery.i18n.properties.js" type="text/javascript"></script>
+		<script src="asset/js/common.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			loadProperties("zh");
+			// function loadProperties(types) {
+			// 	console.log("type----", types);
+			// 	$.i18n.properties({
+			// 		name: 'strings', //属性文件名     命名格式： 文件名_国家代号.properties
+			// 		path: 'i18n/', //注意这里路径是你属性文件的所在文件夹
+			// 		mode: 'map',
+			// 		language: types, //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+			// 		callback: function() {
+			// 			$("[data-locale]").each(function() {
+			// 				$(this).html($.i18n.prop($(this).data("locale")));
+			// 			});
+			// 		}
+			// 	});
+			// }
+			//切换语言
+			$("#lang").on('change', function() {
+				let type = $(this).val();
+				loadProperties(type);
+			})
+		</script>
+	</body>
+</html>

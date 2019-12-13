@@ -9,6 +9,7 @@
 		<meta http-equiv="Cache-Control" content="max-age=600" />
 		<link href="../asset/layui/css/layui.css" rel="stylesheet" media="all" />
 		<link href="../asset/css/animate.min.css" rel="stylesheet" />
+		<link href="../asset/css/aos.css" rel="stylesheet" media="screen" />
 		<link href="../asset/css/common.css" rel="stylesheet" media="screen" />
 		<link href="../asset/css/header.css" rel="stylesheet" media="screen" />
 		<link href="../asset/css/footer.css" rel="stylesheet" media="screen" />
@@ -27,14 +28,14 @@
 						</div>
 						<div class="rightNavList">
 							<ul>
-								<li class="navLi " data-locale="home" data-index="home">HOME</li>
+								<li class="navLi " data-locale="home" data-index="home">首页</li>
 								<li class="navLine">|</li>
-								<li class="navLi" data-locale="products" data-index="product">PRODUCTS</li>
+								<li class="navLi" data-locale="products" data-index="product">产品</li>
 								<li class="navLine">|</li>
-								<li class="navLi checkedNav" data-locale="contact" data-index="contact">CONTACT</li>
+								<li class="navLi checkedNav" data-locale="contact" data-index="contact">联系我们</li>
 								<li class="navLine">|</li>
-								<li class="navSec"><span data-type="zh" class="languageText checkStyle">中文</span>&nbsp;/&nbsp;<span
-									 data-type="en" class="languageText ">EN</span></li>
+								<li class="navSec"><span data-type="zh" class="languageText zh-option">中文</span>&nbsp;/&nbsp;<span data-type="en"
+									 class="languageText en-option">EN</span></li>
 								<li class="navLine">|</li>
 								<li class="navSec">
 									<img src="../asset/img/sousuo.png" class="searchIcon" />
@@ -44,7 +45,7 @@
 					</div>
 				</div>
 
-				<div class="contactTitle" data-locale="contactText">CONTACT</div>
+				<div class="contactTitle" data-locale="contactText" data-aos="fade-left">联系我们</div>
 			</div>
 			<div class="bottomSensor"></div>
 			<div class="contactCard">
@@ -82,31 +83,31 @@
 						<div class="column singleArea">
 							<div class="titleText" data-locale="nameText">NAME</div>
 							<div class="textInput">
-								<input type="text" class="leave_name" />
+								<input type="text" class="leave_name " />
 							</div>
 							<div class="inputDepart"></div>
 						</div>
 						<div class="singleArea">
 							<div class="titleText" data-locale="personEmail">E-MAIL</div>
 							<div class="textInput">
-								<input type="text" class="leave_email" />
+								<input type="text" class="leave_email " />
 							</div>
 							<div class="inputDepart"></div>
 						</div>
 						<div class="singleArea">
 							<div class="titleText" data-locale="personMobile">MOBILE</div>
 							<div class="textInput">
-								<input type="text" class="leave_mobile" />
+								<input type="text" class="leave_mobile " />
 							</div>
 							<div class="inputDepart"></div>
 						</div>
 					</div>
 					<div class="titleOption" data-locale="personleave">LEAVE MESSAGE</div>
 					<div class="leaveMsg">
-						<textarea  placeholder="Enter your message here and all your contact information"></textarea>
+						<textarea class="leaveMessage" placeholder="Enter your message here and all your contact information"></textarea>
 					</div>
 					<div class="submitArea">
-						<button class="layui-btn" data-locale="subBtn">SUBMIT</button>
+						<button class="layui-btn submitBtn" data-locale="subBtn">SUBMIT</button>
 					</div>
 				</div>
 			</div>
@@ -123,11 +124,11 @@
 					<div class="row leftTipNav">
 						<div class="bottomNav">
 							<ul>
-								<li class="hoverText" data-locale="home">Home</li>
+								<li class="hoverText bottomNavText" data-locale="home" data-index="home">Home</li>
 								<li class="bottomNavLine">|</li>
-								<li class="hoverText" data-locale="products">PRODUCTS</li>
+								<li class="hoverText bottomNavText" data-locale="products" data-index="product">PRODUCTS</li>
 								<li class="bottomNavLine">|</li>
-								<li class="hoverText" data-locale="contact">CONTACT</li>
+								<li class="hoverText bottomNavText" data-locale="contact" data-index="contact">CONTACT</li>
 							</ul>
 						</div>
 						<div class="column mentionArea">
@@ -139,9 +140,11 @@
 				</div>
 				<div class="icpArea">Copyright © 2020 inteagle All Rights Reserved</div>
 			</div>
+			<div class="bottomLine"></div>
 		</div>
 		<script src="../asset/layui/layui.js" type="text/javascript"></script>
 		<script src="../asset/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<script src="../asset/js/aos.js" type="text/javascript"></script>
 		<!-- 加载语言包文件 -->
 		<script src="../i18n/jquery.i18n.properties.js"></script>
 		<script src="../asset/js/common.js" type="text/javascript"></script>

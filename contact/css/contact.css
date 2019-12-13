@@ -141,7 +141,8 @@
 
 .contactTitle {
 	position: absolute;
-	font-size: 40px;
+	font-family: MicrosoftYaHei;
+	font-size: 52px;
 	right: 30%;
 	bottom: 30%;
 }
@@ -166,7 +167,7 @@
 
 .cardTitle {
 	margin-top: 10%;
-	font-family: DIN-Medium;
+	font-family: SimHei;
 	font-size: 21px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -186,7 +187,7 @@
 }
 
 .inputTitle {
-	font-family: DIN-Medium;
+	font-family: SimHei;
 	font-size: 16px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -213,11 +214,12 @@
 .inputLine {
 	width: 100%;
 	height: 1px;
-	margin-top: 30px;
+	margin-top: 20px;
 	background-color: #E4E4E4;
 }
 
 .textInput input {
+	color: #979797;
 	font-size: 16px;
 	border: none;
 	background: transparent;
@@ -232,7 +234,7 @@
 }
 
 .messageTitle {
-	font-family: DIN-Medium;
+	font-family: SimHei;
 	font-size: 22px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -251,7 +253,7 @@
 }
 
 .titleText {
-	font-family: DIN-Medium;
+	font-family: SimHei;
 	font-size: 16px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -260,13 +262,13 @@
 }
 
 .textInput {
-	margin-top: 15px;
+	margin-top: 20px;
 }
 
 .inputDepart {
 	width: 100%;
 	height: 1px;
-	margin-top: 20px;
+	margin-top: 5px;
 	background-color: #E4E4E4;
 }
 
@@ -274,7 +276,7 @@
 	width: 100%;
 	text-align: left;
 	margin-top: 5%;
-	font-family: DIN-Medium;
+	font-family: SimHei;
 	font-size: 16px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -307,18 +309,19 @@
 }
 
 .submitArea {
-	width: 20%;
-	height: 60px;
+	width: 319px;
+	height: 86px;
+	background-color: #d5201b;
+	border-radius: 43px;
+	border: solid 1px #505050;
 	margin-top: 5%;
-	border-radius: 40px;
 	text-align: center;
-	background-color: #CD2922;
 }
 
 .submitArea button {
 	border: none;
 	background: transparent;
-	font-family: DIN-Medium;
+	font-family: SimHei;
 	font-size: 18px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -326,6 +329,7 @@
 	color: #ffffff;
 	width: 100%;
 	height: 100%;
+	border-radius: 43px;
 }
 
 .mapArea {

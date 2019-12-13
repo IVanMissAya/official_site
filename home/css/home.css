@@ -10,8 +10,7 @@
 
 .desText {
 	width: 75%;
-	margin: 0px auto;
-	margin-top: 8%;
+	/* margin: 0px auto; */
 }
 
 .topDesText {
@@ -21,6 +20,8 @@
 	font-stretch: normal;
 	letter-spacing: 0px;
 	color: #ffffff;
+	margin-top: 250px;
+	margin-left: 200px;
 }
 
 .bottomDesText {
@@ -31,19 +32,16 @@
 	letter-spacing: 0px;
 	color: #ffffff;
 	margin-top: 31px;
+	margin-left: 195px;
 }
 
 .stuffDetail {
-	width: 50%;
-	margin: 0px auto;
-	padding-bottom: 3%;
-	padding-top: 3%;
-	justify-content: space-around;
+	height: 596px;
+	justify-content: center;
 	align-items: center;
 }
 
 .singleStuff {
-	width: 45%;
 	align-items: center;
 }
 
@@ -63,17 +61,16 @@
 	font-stretch: normal;
 	letter-spacing: 0px;
 	color: #3c3c3c;
-	margin-top: 5px;
+	margin-top: 16px;
 }
 
 .stuffImg {
-	margin-top: 15px;
+	margin-top: 29px;
 }
 
 .stuffTool {
-	width: 70%;
-	margin-top: 15px;
-	justify-content: space-around;
+	width: 100%;
+	margin-top: 26px;
 }
 
 .tool {
@@ -92,25 +89,30 @@
 
 .bottomSensor {
 	width: 100%;
+	height: 710px;
 	background-color: #F7F7F7;
-	padding-top: 80px;
-	padding-bottom: 80px;
-}
-
-.sensorArea {
-	width: 62%;
-	margin: 0px auto;
-	justify-content: space-between;
+	display: flex;
 	align-items: center;
 }
 
-.sensorIcon {
-	/* width: 580px; */
+.sensorArea {
 	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.leftSensorImg {
+	/* margin-left: 360px; */
+}
+
+.sensorIcon {
+	width: 614px;
+	height: 461px;
 }
 
 .stuffIcon {
-	width: 100%;
+	width: 362px;
+	height: 249px;
 }
 
 .sensorTitle {
@@ -123,8 +125,8 @@
 }
 
 .sensorTable {
-	width: 420px;
-	margin-top: 15px;
+	width: 500px;
+	margin-top: 20px;
 }
 
 .sensorTable table {
@@ -133,9 +135,9 @@
 
 .sensorTable table tr td {
 	border: 1px solid #E7E6E7;
-	height: 40px;
-	line-height: 40px;
-	text-indent: 1em;
+	height: 50px;
+	line-height: 50px;
+	text-indent: 24px;
 }
 
 /*设置奇数行颜色*/
@@ -167,7 +169,7 @@
 }
 
 .sensorDetail {
-	margin-left: 60px;
+	margin-left: 70px;
 	font-family: MicrosoftYaHei;
 	font-size: 16px;
 	font-weight: normal;
@@ -177,7 +179,7 @@
 }
 
 .sensorText {
-	margin-top: 8px;
+	margin-top: 26px;
 	font-family: MicrosoftYaHei;
 	font-size: 15px;
 	font-weight: normal;
@@ -194,4 +196,27 @@
 	font-stretch: normal;
 	letter-spacing: 0px;
 	color: #3c3c3c;
+}
+
+
+.firstStuff {
+	/* margin-left: 538px;
+	margin-top: 122px; */
+}
+
+
+.secondStuff {
+	/* margin-left: 121px;
+	margin-top: 122px; */
+	margin-left: 80px;
+}
+
+
+.moreText {
+	margin-left: 87px;
+}
+
+.buyText {
+	margin-left: 41px;
+	margin-right: 88px;
 }

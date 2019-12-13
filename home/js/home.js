@@ -3,8 +3,4 @@
  */
 $(function() {
 	localStorage.setItem("router", "home");
-	
-	AOS.init({
-		duration: 1200,
-	});
 })

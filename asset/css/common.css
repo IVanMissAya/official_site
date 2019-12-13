@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0
+}
+
 .row {
 	display: flex;
 	flex-direction: row;
@@ -19,37 +24,51 @@
 	-ms-user-select: none;
 }
 
+.logoIcon:hover {
+	cursor: pointer;
+}
+
+.scaleImg {
+	cursor: pointer;
+	transition: all 0.6s;
+}
+
+.scaleImg:hover {
+	transform: scale(1.1);
+}
+
 
 @charset "UTF-8";
+
 @font-face {
-  font-family: "DFPZongYiW7";
-  src: url("../font/DFPZongYiW7.woff2") format("woff2"),
-       url("../font/DFPZongYiW7.woff") format("woff"),
-       url("../font/DFPZongYiW7.ttf") format("truetype"),
-       url("../font/DFPZongYiW7.eot") format("embedded-opentype"),
-       url("../font/DFPZongYiW7.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "DFPZongYiW7";
+	src: url("../font/DFPZongYiW7.woff2") format("woff2"),
+		url("../font/DFPZongYiW7.woff") format("woff"),
+		url("../font/DFPZongYiW7.ttf") format("truetype"),
+		url("../font/DFPZongYiW7.eot") format("embedded-opentype"),
+		url("../font/DFPZongYiW7.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: "DIN-Medium";
-  src: url("../font/DIN-Medium.woff2") format("woff2"),
-       url("../font/DIN-Medium.woff") format("woff"),
-       url("../font/DIN-Medium.ttf") format("truetype"),
-       url("../font/DIN-Medium.eot") format("embedded-opentype"),
-       url("../font/DIN-Medium.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "DIN-Medium";
+	src: url("../font/DIN-Medium.woff2") format("woff2"),
+		url("../font/DIN-Medium.woff") format("woff"),
+		url("../font/DIN-Medium.ttf") format("truetype"),
+		url("../font/DIN-Medium.eot") format("embedded-opentype"),
+		url("../font/DIN-Medium.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: "DIN-Bold";
-  src: url("../font/DIN-Bold.woff2") format("woff2"),
-       url("../font/DIN-Bold.woff") format("woff"),
-       url("../font/DIN-Bold.ttf") format("truetype"),
-       url("../font/DIN-Bold.eot") format("embedded-opentype"),
-       url("../font/DIN-Bold.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
+	font-family: "DIN-Bold";
+	src: url("../font/DIN-Bold.woff2") format("woff2"),
+		url("../font/DIN-Bold.woff") format("woff"),
+		url("../font/DIN-Bold.ttf") format("truetype"),
+		url("../font/DIN-Bold.eot") format("embedded-opentype"),
+		url("../font/DIN-Bold.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
 }
