@@ -143,20 +143,18 @@
 	position: absolute;
 	font-family: MicrosoftYaHei;
 	font-size: 52px;
-	right: 30%;
+	right: 24.4%;
 	bottom: 30%;
 }
 
 .contactCard {
-	width: 60%;
+	width: 62.5%;
 	margin: 0px auto;
-	padding-bottom: 5%;
 	background-color: #fff;
-	margin-top: -12%;
 	border-radius: 10px;
 	position: absolute;
-	top: 70%;
-	left: 21%;
+	top: 45%;
+	right: 18.7%;
 	z-index: 11;
 }
 
@@ -314,8 +312,9 @@
 	background-color: #d5201b;
 	border-radius: 43px;
 	border: solid 1px #505050;
-	margin-top: 5%;
+	margin-top: 75px;
 	text-align: center;
+	margin-bottom: 80px;
 }
 
 .submitArea button {

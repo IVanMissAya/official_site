@@ -28,7 +28,7 @@ $(".bottomNavText").on("click", function(dom) {
 /**
  * 点击logo图片 跳转到首页
  */
-$(".logoIcon").on("click",function(dom){
+$(".logoIcon").on("click", function(dom) {
 	window.location.href = "../home/home.html";
 })
 
@@ -100,11 +100,13 @@ $(window).scroll(function() {
 		$('.headerNav').addClass("headerNav_scroll");
 		$('.nav_title').addClass("nav_title_scroll");
 		$('.navLogo').addClass("logoIcon_scroll");
+		$(".languageText").addClass("languageTextScroll");
 		$(".navLogo").attr("src", "../asset/img/product_logo.png");
 	} else {
 		$('.headerNav').removeClass("headerNav_scroll");
 		$('.nav_title').removeClass("nav_title_scroll");
 		$('.navLogo').removeClass("logoIcon_scroll");
+		$(".languageText").removeClass("languageTextScroll");
 		if (router === "product") {
 			$(".navLogo").attr("src", "../asset/img/product_logo.png");
 		} else {

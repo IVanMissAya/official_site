@@ -1,7 +1,7 @@
 .navArea {
 	width: 100%;
 	/* height: 860px; */
-	height: 88vh;
+	/* height: 88vh; */
 	color: #6B6B6B;
 	background-color: #E4E4E4;
 }
@@ -18,7 +18,7 @@
 
 .desText {
 	width: 80%;
-	height: 81%;
+	height: 731px;
 	margin: 0px auto;
 	justify-content: space-around;
 }
@@ -116,6 +116,7 @@
 
 .productIcon {
 	width: 100%;
+	height: 100%;
 }
 
 .pback {
@@ -124,7 +125,8 @@
 }
 
 .productStuffImg {
-	width: 55%;
+	width: 360px;
+	height: 244px;
 	z-index: 20;
 	position: absolute;
 }
@@ -181,13 +183,17 @@
 
 
 .leftBack {
+	height: 626px;
+	width: 626px;
 	position: absolute;
 	z-index: 10;
 	animation: turn 1s;
 }
 
 .rightBack {
-	/* position: absolute; */
+	height: 626px;
+	width: 626px;
+	position: absolute;
 	z-index: 10;
 	animation: turn_left 1s;
 }
