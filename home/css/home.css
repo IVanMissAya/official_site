@@ -3,7 +3,7 @@
 	height: 100vh;
 	color: #fff;
 	/* position: fixed; */
-	background: url(../../asset/img/home_1.png) center center;
+	background: url(../../asset/img/home.png) center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -219,4 +219,18 @@
 .buyText {
 	margin-left: 41px;
 	margin-right: 88px;
+}
+
+.rightNavList ul li {
+	color: #000000;
+}
+
+.languageText {
+	color: #6B6B6B;
+}
+
+.checkedNav {
+	color: #fff !important;
+	background-color: #DA241D;
+	border-radius: 15px;
 }

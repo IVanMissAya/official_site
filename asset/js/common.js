@@ -107,11 +107,7 @@ $(window).scroll(function() {
 		$('.nav_title').removeClass("nav_title_scroll");
 		$('.navLogo').removeClass("logoIcon_scroll");
 		$(".languageText").removeClass("languageTextScroll");
-		if (router === "product") {
-			$(".navLogo").attr("src", "../asset/img/product_logo.png");
-		} else {
-			$(".navLogo").attr("src", "../asset/img/logo.png");
-		}
+		$(".navLogo").attr("src", "../asset/img/product_logo.png");
 	}
 });
 
