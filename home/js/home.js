@@ -4,3 +4,4 @@
 $(function() {
 	localStorage.setItem("router", "home");
 })
+

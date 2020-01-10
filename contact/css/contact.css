@@ -9,6 +9,10 @@
 	/* background-size: 100% 100% center center; */
 }
 
+.headerNav {
+	background: transparent;
+}
+
 
 .desText {
 	width: 75%;

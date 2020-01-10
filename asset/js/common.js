@@ -14,7 +14,10 @@ layui.use(['layer', 'laydate', 'form'], function() {
  */
 $(".navLi").on("click", function(dom) {
 	let index = dom.currentTarget.dataset.index;
-	window.location.href = "../" + index + "/" + index + ".html";
+	if (index === "product") {
+		scrollToStuff();
+	}
+	// window.location.href = "../" + index + "/" + index + ".html";
 })
 
 /**
@@ -22,8 +25,20 @@ $(".navLi").on("click", function(dom) {
  */
 $(".bottomNavText").on("click", function(dom) {
 	let index = dom.currentTarget.dataset.index;
-	window.location.href = "../" + index + "/" + index + ".html";
+	if (index === "product") {
+		scrollToStuff();
+	}
+	// window.location.href = "../" + index + "/" + index + ".html";
 })
+
+/**
+ * 滚动到节点位置
+ */
+function scrollToStuff(){
+	$('html , body').animate({
+		scrollTop: $('#stuffDetail').offset().top - 150
+	}, 1000);
+}
 
 /**
  * 点击logo图片 跳转到首页
@@ -38,11 +53,11 @@ $(".logoIcon").on("click", function(dom) {
  */
 $(function() {
 	//查看localStorage中的语言
-	let type = "zh";
-	if (localStorage.getItem("lanaguage")) {
-		type = localStorage.getItem("lanaguage");
-	}
-	loadProperties(type);
+	// let type = "zh";
+	// if (localStorage.getItem("lanaguage")) {
+	// 	type = localStorage.getItem("lanaguage");
+	// }
+	// loadProperties(type);
 
 	AOS.init({
 		duration: 1200,
@@ -52,18 +67,18 @@ $(function() {
 /**
  * 选择语言
  */
-$(".languageText").on("click", function(dom) {
-	let type = dom.currentTarget.dataset.type;
-	//语言类型存入localStorage
-	localStorage.setItem("lanaguage", type);
-	//切换语言
-	loadProperties(type);
-	$(".navSec span").removeClass("checkStyle");
-	$(".navSec span").promise().done(function() {
-		let target = $(dom.currentTarget);
-		target.addClass("checkStyle");
-	})
-})
+// $(".languageText").on("click", function(dom) {
+// 	let type = dom.currentTarget.dataset.type;
+// 	//语言类型存入localStorage
+// 	localStorage.setItem("lanaguage", type);
+// 	//切换语言
+// 	loadProperties(type);
+// 	$(".navSec span").removeClass("checkStyle");
+// 	$(".navSec span").promise().done(function() {
+// 		let target = $(dom.currentTarget);
+// 		target.addClass("checkStyle");
+// 	})
+// })
 
 //加载语言包文件
 function loadProperties(types) {

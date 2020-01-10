@@ -1,10 +1,11 @@
 .headerNav {
 	width: 100%;
 	position: relative;
+	background-color: #F6F6F6;
 }
 
 .headerNav_scroll {
-	background-color: #EFEEEF;
+	background-color: #EFEEEF!important;
 	position: fixed;
 	top: 0;
 	color: #4D4D4D;
@@ -34,7 +35,7 @@
 
 .nav_title {
 	width: 80%;
-	height: 140px;
+	height: 90px;
 	margin: 0px auto;
 	padding-left: 100px;
 	padding-right: 100px;
@@ -46,13 +47,15 @@
 
 
 .logoIcon {
-	width: 98px;
-	height: 87px;
+	width: 70%;
+/* 	width: 98px;
+	height: 87px; */
 }
 
 .logoIcon_scroll {
-	width: 58px;
-	height: 51px;
+	width: 70%;
+	/* width: 58px;
+	height: 51px; */
 }
 
 .rightNavList {
