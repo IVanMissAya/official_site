@@ -2,9 +2,8 @@
  * 页面加载事件
  */
 $(function() {
-
-
-
+	//监听回车键事件
+	enterKeydown("chat-bar");
 })
 
 
@@ -30,6 +29,8 @@ $(".tool-icon").on("click", function(dom) {
 			switch (index) {
 				case "0":
 					$(".chat-bar").show();
+					$(".chat-time").html(getNowFormatDate(0));
+					$('.chat-content-area').prop('scrollTop', $('.chat-content-area')[0].scrollHeight);
 					break;
 				case "1":
 					$(".phoneArea").show();
@@ -40,11 +41,7 @@ $(".tool-icon").on("click", function(dom) {
 			}
 		})
 	}
-
-
-
 })
-
 
 /**
  * 关闭聊天窗

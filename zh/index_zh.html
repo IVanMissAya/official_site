@@ -160,7 +160,7 @@
 		<div class="tool-bar">
 			<ul>
 				<li>
-					<div class="tool-icon" data-index="0" data-flag="hide">
+					<div class="tool-icon" style="border-top-left-radius: 5px;" data-index="0" data-flag="hide">
 						<img src="../asset/img/tool1.png" />
 					</div>
 				</li>
@@ -171,7 +171,7 @@
 					</div>
 				</li>
 				<li>
-					<div class="tool-icon" style="border: none;" data-index="2" data-flag="hide">
+					<div class="tool-icon" style="border: none; border-bottom-left-radius: 5px;" data-index="2" data-flag="hide">
 						<img src="../asset/img/tool3.png" />
 						<div class="column tool-inside qrcodeArea animated fadeInRight">
 							<div class="sin-code-box">
@@ -198,20 +198,17 @@
 					</li>
 				</ul>
 			</div>
+			
 			<div class="column chat-content-area" id="chat-content-area">
-				<div class="chat-tip"><span>1月11日 09:30</span></div>
-				<div class="row msg-box">
+				<div class="chat-tip"><span class="chat-time"></span></div>
+				<div class="row msg-box-receive">
 					<div class="chat-icon"></div>
 					<div class="msg-content-card-receive">
 						<span>您好，请问有什么问题可以帮助您？我们全心为您服务，请会话结束以后对我服务给予评价。</span>
 					</div>
 				</div>
-				<div class="msg-box-send">
-					<div class="msg-wrap-send">
-						<span>Hello world</span>
-					</div>
-				</div>
 			</div>
+			
 			<div class="send-card">
 				<div class="send-tools">
 					<ul>
@@ -235,12 +232,20 @@
 		<script src="../../official/asset/js/jquery-3.2.1.min.js" type="text/javascript"></script>
 		<script src="../../official/asset/js/common.js" type="text/javascript"></script>
 		<script src="../asset/js/socketBase.js" type="text/javascript"></script>
-		<script src="../home/js/chat.js" type="text/javascript"></script>
+		<script src="../home/js/connectSocket.js" type="text/javascript"></script>
 		<script src="../../official/home/js/home.js" type="text/javascript"></script>
 		<script type="text/template" id="tips-module">
 			<div class="chat-tip"><span>[tips]</span></div>
 		</script>
-		<script type="text/template" id="chat-msg-module">
+		<script type="text/template" id="chat-msg-receive">
+			<div class="row msg-box-receive">
+				<div class="chat-icon"></div>
+				<div class="msg-content-card-receive">
+					<span>[msg]</span>
+				</div>
+			</div>
+		</script>
+		<script type="text/template" id="chat-msg-send">
 			<div class="msg-box-send">
 				<div class="msg-wrap-send">
 					<span>[msg]</span>

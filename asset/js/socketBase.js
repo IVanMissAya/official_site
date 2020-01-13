@@ -3,12 +3,18 @@ var heartbeatPack = {
 	"type": 0,
 }
 
+//消息类型
+const MSG_TYPE = {
+	"chatTab": "0",
+	"chatMsg": "1",
+	"msgRecord": "3"
+}
+
 //封装原型添加方法
 Function.prototype.addSocketMethod = function(name, fn) {
 	this.prototype[name] = fn;
 	return this
 }
-
 //创建一个原型
 var socketEntity = function() {};
 
@@ -29,8 +35,8 @@ socketEntity
 	.addSocketMethod("heartbeatPackage", function(ws) {
 		var that = this;
 		that.timedTask.heartbeat = setInterval(function() {
-			console.log("心跳----", JSON.stringify(heartbeatPack));
-			that.ws.sendMsg(JSON.stringify(heartbeatPack));
+			// console.log("心跳----", JSON.stringify(heartbeatPack));
+			// that.ws.sendMsg(JSON.stringify(heartbeatPack));
 		}, 10000);
 	})
 	//添加连接地址
@@ -104,7 +110,7 @@ socketEntity
 		}
 		that.ws = new WebSocket(that.wsServer);
 		that.ws.onopen = function(evt) {
-			// console.log(evt);
+			console.log("evt----", evt);
 			//连接成功，启动心跳
 			that.heartbeatPackage(that.ws);
 			//连接成功，启动网络状态监听
@@ -120,7 +126,7 @@ socketEntity
 					// console.log("正在连接...");
 					break;
 				case this.OPEN:
-					// console.log("已经接连成功...");
+					// console.log("连接成功...");
 					this.send(evt);
 					break;
 				case this.CLOSING:
@@ -182,19 +188,14 @@ function uuid(len, radix) {
 }
 
 //获得当前系统时间  yyyy-MM-dd HH:mm:ss
-function getNowFormatDate() {
-
+function getNowFormatDate(format) {
 	var date = new Date();
 	var month = date.getMonth() + 1;
 	var strDate = date.getDate();
-
 	var strHours = date.getHours();
 	var strMinutes = date.getMinutes();
 	var strSeconds = date.getSeconds();
 
-	if (month >= 1 && month <= 9) {
-		month = "0" + month;
-	}
 	if (strDate >= 0 && strDate <= 9) {
 		strDate = "0" + strDate;
 	}
@@ -207,16 +208,33 @@ function getNowFormatDate() {
 	if (strSeconds >= 0 && strSeconds <= 9) {
 		strSeconds = "0" + strSeconds;
 	}
-
-	var currentDate = date.getFullYear() + "-" + month + "-" + strDate +
-		" " + strHours + ":" + strMinutes + ":" + strSeconds;
-
+	var currentDate;
+	if (format === 0) {
+		currentDate = month + "-" + strDate +
+			" " + strHours + ":" + strMinutes;
+	} else if (format === 1) {
+		if (month >= 1 && month <= 9) {
+			month = "0" + month;
+		}
+		currentDate = date.getFullYear() + "-" + month + "-" + strDate +
+			" " + strHours + ":" + strMinutes + ":" + strSeconds;
+	}
 	return currentDate;
 }
 
 //获得当前系统时间 时间戳
 function getNowFormatDateStamp() {
 	var timestamp = new Date().getTime();
-
 	return timestamp;
+}
+
+function timestampToTime(timestamp) {
+	var date = new Date(timestamp); //时间戳为10位需*1000，时间戳为13位的话不需乘1000
+	var Y = date.getFullYear() + '-';
+	var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+	var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate() + ' ';
+	var h = date.getHours() < 10 ? '0' + date.getHours() : date.getHours() + ':';
+	var m = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes() + ':';
+	var s = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds();
+	return M + D + h + m + s;
 }

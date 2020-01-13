@@ -14,143 +14,86 @@
 	<body>
 		<div class="layui-container bg-container">
 			<div class="row chat-box">
+				<!-- user-list -->
 				<div class="column chat-list-column">
-					
-					<a href="#tab1" data-index="tab1" class="toTab">
-						<div class="row sin-chat-card active-card">
-							<div class="row chat-info-box">
-								<div class="chat-user-pic">
-									<img src="../asset/img/chatIcon.png" />
-								</div>
-								<div class="column chat-esli-box">
-									<div class="chat-user-name">IVAn</div>
-									<div class="chat-last-msg">hello world</div>
-								</div>
-							</div>
-							<div class="column chat-time-text">14:25</div>
-						</div>
-					</a>
-					
-					<a href="#tab2" data-index="tab2" class="toTab">
-						<div class="row sin-chat-card">
-							<div class="row chat-info-box">
-								<div class="chat-user-pic">
-									<img src="../asset/img/chatIcon.png" />
-								</div>
-								<div class="column chat-esli-box">
-									<div class="chat-user-name">IVAn2</div>
-									<div class="chat-last-msg">hello world2</div>
-								</div>
-							</div>
-							<div class="column chat-time-text">14:22</div>
-						</div>
-					</a>
-
-
+						
 				</div>
-
+				<!-- chat-tab-list -->
 				<div class="column chat-content-box">
 
-					<div id="tab1" class="chat-tab active-tab">
-						<div class="chat-top-box"><span>IVAn</span></div>
-						<div class="column msg-content-box">
-							<div class="msg-tips">11月18日 14:35</div>
-							<div class="row msg-box-receive">
-								<div class="msg-box-receive-icon">
-									<img src="../asset/img/chatIcon.png" />
-								</div>
-								<div class="msg-pop-box-receive">
-									hello world
-								</div>
-							</div>
-							<div class="row msg-box-send">
-								<div class="msg-pop-box-send">
-									hello world
-								</div>
-							</div>
-						</div>
-						<div class="msg-send-card">
-							<div class="send-tools">
-								<ul>
-									<li>
-										<img src="../asset/img/emoji.png">
-									</li>
-									<li>
-										<img src="../asset/img/up-pic.png" style="width: 24px;">
-									</li>
-								</ul>
-							</div>
-							<div class="send-msg-box">
-								<textarea placeholder="点击输入内容..." id="msg-content"></textarea>
-							</div>
-							<div class="send-msg-bt">
-								<button type="button" class="layui-btn layui-btn-primary sendBtn">发送</button>
-							</div>
-						</div>
-					</div>
-					
-					<div id="tab2" class="chat-tab">
-						<div class="chat-top-box"><span>IVAn2</span></div>
-						<div class="column msg-content-box">
-							<div class="msg-tips">11月22日 14:35</div>
-							<div class="row msg-box-receive">
-								<div class="msg-box-receive-icon">
-									<img src="../asset/img/chatIcon.png" />
-								</div>
-								<div class="msg-pop-box-receive">
-									hello world2
-								</div>
-							</div>
-							<div class="row msg-box-send">
-								<div class="msg-pop-box-send">
-									hello world2
-								</div>
-							</div>
-						</div>
-						<div class="msg-send-card">
-							<div class="send-tools">
-								<ul>
-									<li>
-										<img src="../asset/img/emoji.png">
-									</li>
-									<li>
-										<img src="../asset/img/up-pic.png" style="width: 24px;">
-									</li>
-								</ul>
-							</div>
-							<div class="send-msg-box">
-								<textarea placeholder="点击输入内容..." id="msg-content"></textarea>
-							</div>
-							<div class="send-msg-bt">
-								<button type="button" class="layui-btn layui-btn-primary sendBtn">发送</button>
-							</div>
-						</div>
-					</div>
-
-					
-					
-					
 				</div>
 
 			</div>
 		</div>
 		<script src="../../official/asset/layui/layui.js" type="text/javascript"></script>
 		<script src="../../official/asset/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<script src="../asset/js/common.js" type="text/javascript"></script>
+		<script src="../asset/js/socketBase.js" type="text/javascript"></script>
 		<script src="../../official/chat/js/chat.js" type="text/javascript"></script>
+		<!-- 提示框模板 -->
 		<script type="text/template" id="msg-tips">
 			<div class="msg-tips">[msg_tips]</div>
 		</script>
-		<script type="text/template" id="msg-content-receive">
+		<!-- 收到消息模板 -->
+		<script type="text/template" id="chat-msg-receive">
 			<div class="row msg-box-receive">
 				<div class="msg-box-receive-icon">
 					<img src="../asset/img/chatIcon.png" />
 				</div>
-				<div class="msg-pop-box-receive">[receive_msg]</div>
+				<div class="msg-pop-box-receive">[msg]</div>
 			</div>
 		</script>
-		<script type="text/template" id="msg-content-send">
+		<!-- 发送消息模板 -->
+		<script type="text/template" id="chat-msg-send">
 			<div class="row msg-box-send">
-				<div class="msg-pop-box-send">[send_msg]</div>
+				<div class="msg-pop-box-send">[msg]</div>
+			</div>
+		</script>
+		<!-- 用户列表模板 -->
+		<script type="text/template" id="chat-box-module">
+			<div data-index="[chat-box-index]" class="toTab" id="[chat-box-id]" data-flag="hidden" onclick="changeTab(this)">
+				<div class="row sin-chat-card">
+					<div class="row chat-info-box">
+						<div class="chat-user-pic">
+							<img src="../asset/img/chatIcon.png" />
+						</div>
+						<div class="column chat-esli-box">
+							<div class="chat-user-name">[chat-user-name]</div>
+							<div class="chat-last-msg" id="[chat-id-last]">[chat-last-msg]</div>
+						</div>
+					</div>
+					<div class="column chat-time-box">
+						<div class="chat-unread"><span class="unread">3</span></div>
+						<div class="chat-time-text" id="[chat-id-time]">[chat-time]</div>	
+					</div>
+				</div>
+			</div>
+		</script>
+		<!-- 聊天窗口模板 -->
+		<script type="text/template" id="chat-tab-mudole">
+			<div id="[chat-tab-id]" class="chat-tab">
+				<div class="chat-top-box"><span>[chat-user-name]</span></div>
+				<div class="column msg-content-box">
+					
+				</div>
+				<div class="msg-send-card">
+					<div class="send-tools">
+						<ul>
+							<li>
+								<img src="../asset/img/emoji.png">
+							</li>
+							<li>
+								<img src="../asset/img/up-pic.png" style="width: 24px;">
+							</li>
+						</ul>
+					</div>
+					<div class="send-msg-box">
+						<textarea placeholder="点击输入内容..." id="[chat-area]"></textarea>
+					</div>
+					<div class="send-msg-bt">
+						<button type="button" class="layui-btn layui-btn-primary sendBtn" data-tab="[tab-id]" onclick="sendMsg(this)">发送</button>
+					</div>
+				</div>
 			</div>
 		</script>
 	</body>

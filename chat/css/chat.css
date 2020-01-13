@@ -22,18 +22,7 @@
 	background-repeat: no-repeat;
 }
 
-.chat-box {
-	position: relative;
-	width: 60%;
-	height: 80%;
-	overflow: hidden;
-	border-top-left-radius: 5px;
-	-moz-border-radius-topleft: 5px;
-	-webkit-border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	-moz-border-radius-topright: 5px;
-	-webkit-border-top-right-radius: 5px;
-}
+
 
 .chat-list-column {
 	width: 25%;
@@ -65,16 +54,45 @@
 	height: 45px;
 }
 
+.chat-info-box {
+	width: 60%;
+}
+
 .chat-esli-box {
+	width: 60%;
 	margin-left: 10px;
 }
 
+.chat-time-box {
+	width: 40%;
+	justify-content: space-between;
+	text-align: right;
+}
+
+
 .chat-last-msg {
+	width: 100%;
 	margin-top: 10px;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+	vertical-align: middle;
 }
 
 .chat-time-text {
-	justify-content: flex-end;
+	white-space: nowrap;
+}
+
+.unread {
+	background-color: #FF0000;
+	color: #F0F0F0;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-radius: 50%;
 }
 
 .chat-user-name {
@@ -103,12 +121,14 @@
 	padding: 5px 0;
 }
 
+.msg-box-receive {
+	margin: 8px 0px;
+}
+
 .msg-box-receive-icon img {
 	width: 45px;
 	height: 45px;
 }
-
-
 
 .send-tools {
 	width: 95%;
@@ -218,6 +238,20 @@
 
 
 @media only screen and (min-width: 1400px) {
+	.chat-box {
+		position: relative;
+		width: 60%;
+		height: 80%;
+		overflow: hidden;
+		border-top-left-radius: 5px;
+		-moz-border-radius-topleft: 5px;
+		-webkit-border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		-moz-border-radius-topright: 5px;
+		-webkit-border-top-right-radius: 5px;
+	}
+
+
 	.msg-content-box {
 		width: 95%;
 		height: 55%;
@@ -236,6 +270,20 @@
 }
 
 @media only screen and (max-width: 1400px) {
+
+	.chat-box {
+		position: relative;
+		width: 80%;
+		height: 80%;
+		overflow: hidden;
+		border-top-left-radius: 5px;
+		-moz-border-radius-topleft: 5px;
+		-webkit-border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		-moz-border-radius-topright: 5px;
+		-webkit-border-top-right-radius: 5px;
+	}
+
 	.msg-content-box {
 		width: 95%;
 		height: 40%;
