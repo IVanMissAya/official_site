@@ -86,6 +86,7 @@
 }
 
 .unread {
+	display: none;
 	background-color: #FF0000;
 	color: #F0F0F0;
 	padding-left: 5px;

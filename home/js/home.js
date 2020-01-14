@@ -6,19 +6,21 @@ $(function() {
 	enterKeydown("chat-bar");
 })
 
-
 /**
  * 右侧工具栏
  */
 $(".tool-icon").on("click", function(dom) {
 	let index = dom.currentTarget.dataset.index,
 		flag = dom.currentTarget.dataset.flag;
-	$(".tool-icon").attr("data-flag", "hide")
+
+	$(".tool-icon").attr("data-flag", "hide");
 	if (flag == "show") {
 		$(".tool-inside").removeClass("fadeInRight");
 		$(".tool-inside").addClass("fadeOutRight");
 		$(".tool-inside").promise().done(function() {
-			$(".tool-inside").hide();
+			setTimeout(function() {
+				$(".tool-inside").hide();
+			}, 500)
 		})
 	} else {
 		dom.currentTarget.dataset.flag = "show";
@@ -50,6 +52,7 @@ $("#hide-chat").on("click", function() {
 	$("#chat-bar").addClass("fadeOutRight");
 	$("#chat-bar").promise().done(function() {
 		setTimeout(function() {
+			$(".tool-bar ul li:first-child div").attr("data-flag", "hide");
 			$("#chat-bar").hide();
 		}, 500)
 	})

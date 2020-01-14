@@ -6,12 +6,14 @@ if (getCookie("chatId")) {
 } else {
 	chatId = uuid(8);
 	setCookie("chatId", chatId, 1);
+	//是否第一次接入会话
+	setCookie("is-chat", "false", 1);
 }
 
 // 本地socket路径
-const wsServer = "ws://192.168.26.135:8080/netSocket/" + chatId;
+// const wsServer = "ws://192.168.26.135:8080/netSocket/" + chatId;
 // 服务器socket路径
-// const wsServer = "wss://www.inteagle.com.cn/inteagle-manage/netSocket/ivan";
+const wsServer = "wss://www.inteagle.com.cn/inteagle-manage/netSocket/" + chatId;
 if (typeof(WebSocket) == "undefined") {
 	console.log("您的浏览器不支持WebSocket");
 } else {
@@ -33,7 +35,7 @@ if (typeof(WebSocket) == "undefined") {
  * 发送信息
  */
 $(".sendBtn").on("click", function() {
-	let msg_content = $("#msg-content").val();
+	let msg_content = $("#msg-content").val().trim();
 	if (notNull(msg_content)) {
 		let msg_box = document.getElementById("chat-msg-send").innerHTML;
 		msg_box = msg_box.replace("[msg]", msg_content);
@@ -41,10 +43,18 @@ $(".sendBtn").on("click", function() {
 			type: "1",
 			msg: msg_content
 		};
-		socket.ws.sendMsg(JSON.stringify(msg_obj));
-		$(".chat-content-area").append(msg_box);
-		$("#msg-content").val("");
-		$('.chat-content-area').prop('scrollTop', document.getElementById("chat-content-area").scrollHeight);
+		//判断当前连接状态
+		if (socket.ws.readyState === socket.webSocketState.OPEN) {
+			if (getCookie("is-chat") === "false") {
+				printTips("会话创建成功");
+				printTips("会话已被客服接起");
+				setCookie("is-chat", "true", 1);
+			}
+			socket.ws.sendMsg(JSON.stringify(msg_obj));
+			$(".chat-content-area").append(msg_box);
+			$("#msg-content").val("");
+			$('.chat-content-area').prop('scrollTop', document.getElementById("chat-content-area").scrollHeight);
+		}
 	}
 })
 
@@ -77,4 +87,14 @@ function printModule(msg, type) {
 	module = module.replace("[msg]", msg);
 	$(".chat-content-area").append(module);
 	$('.chat-content-area').prop('scrollTop', document.getElementById("chat-content-area").scrollHeight);
+}
+
+/**
+ * 打印提示消息
+ * @param {Object} tips_msg
+ */
+function printTips(tips_msg) {
+	let tips_module = document.getElementById("tips-module").innerHTML;
+	tips_module = tips_module.replace("[tips]", tips_msg);
+	$(".chat-content-area").append(tips_module);
 }

@@ -1,9 +1,9 @@
 let socket,
 	chatId = "inteagle.chat.id";
 // 本地socket路径
-const wsServer = "ws://192.168.26.135:8080/netSocket/" + chatId;
+// const wsServer = "ws://192.168.26.135:8080/netSocket/" + chatId;
 // 服务器socket路径
-// const wsServer = "wss://www.inteagle.com.cn/inteagle-manage/netSocket/ivan";
+const wsServer = "wss://www.inteagle.com.cn/inteagle-manage/netSocket/" + chatId;
 if (typeof(WebSocket) == "undefined") {
 	console.log("您的浏览器不支持WebSocket");
 } else {
@@ -16,7 +16,6 @@ if (typeof(WebSocket) == "undefined") {
 	socket.connect(wsServer);
 }
 //处理socket消息
-// socket消息处理
 if (socket != null) {
 	socket.writeScreen = function(res) {
 		if (res.type === MSG_TYPE.chatTab) {
@@ -27,12 +26,17 @@ if (socket != null) {
 		} else if (res.type === MSG_TYPE.chatMsg || res.type === MSG_TYPE.msgRecord) {
 			//消息处理
 			if (res.sendId === chatId) {
+				//发消息
 				printMsgModule(res, "send");
 				$("#" + res.collectId + "-tab .msg-content-box").prop('scrollTop', $("#" + res.collectId + "-tab .msg-content-box")[
 					0].scrollHeight);
 			} else {
+				//收消息
 				//判断窗口是否存在
 				if ($("#" + res.sendId + "-tab").length > 0) {
+					//处理未读
+					dealUnRead(res.sendId);
+
 					printMsgModule(res, "receive");
 					$("#" + res.sendId + "-tab .msg-content-box").prop('scrollTop', $("#" + res.sendId + "-tab .msg-content-box")[0].scrollHeight);
 				} else {
@@ -65,8 +69,8 @@ function changeTab(dom) {
 	if (flag === "hidden") {
 		//查询历史记录
 		getMsgRecord(index);
-			
-		$(".toTab").attr("data-flag","hidden");
+
+		$(".toTab").attr("data-flag", "hidden");
 		$(dom)[0].dataset.flag = "show";
 	}
 	//绑定回车键事件
@@ -91,7 +95,6 @@ function getMsgRecord(id) {
 }
 
 
-
 /**
  * 绑定回车键事件
  * @param {Object} id
@@ -103,7 +106,6 @@ function enterKeydown(id) {
 		}
 	});
 }
-
 
 /**
  * 发送消息
@@ -124,6 +126,25 @@ function sendMsg(dom) {
 		$("#" + tab_id + "-tab .msg-content-box").append(msg_box);
 		$("#" + tab_id + "-textarea").val("");
 		$("#" + tab_id + "-tab .msg-content-box").prop('scrollTop', $("#" + tab_id + "-tab .msg-content-box")[0].scrollHeight);
+	}
+}
+
+/**
+ * 处理未读消息
+ */
+function dealUnRead(id) {
+	let is_check = $("#" + id + "-box").attr("data-flag");
+	if (is_check === "show") {
+		$("#" + id + "-unread").html(0);
+		$("#" + id + "-unread").hide();
+	} else {
+		let unread = parseInt($("#" + id + "-unread").text());
+		unread++;
+		if (unread >= 99) {
+			unread = 99;
+		}
+		$("#" + id + "-unread").html(unread);
+		$("#" + id + "-unread").show();
 	}
 }
 
@@ -160,6 +181,7 @@ function printBoxModule(obj) {
 	module = module.replace("[chat-user-name]", obj.collectId);
 	module = module.replace("[chat-id-last]", obj.collectId + "-last");
 	module = module.replace("[chat-id-time]", obj.collectId + "-time");
+	module = module.replace("[chat-id-unread]", obj.collectId + "-unread");
 	module = module.replace("[chat-last-msg]", "");
 	module = module.replace("[chat-time]", "");
 	$(".chat-list-column").append(module);
