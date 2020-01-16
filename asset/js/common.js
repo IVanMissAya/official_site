@@ -25,6 +25,20 @@ $(".bottomNavText").on("click", function(dom) {
 	let index = dom.currentTarget.dataset.index;
 	if (index === "product") {
 		scrollToStuff();
+	} else if (index === "contact") {
+		$("#chat-bar").removeClass("fadeOutRight");
+		$("#chat-bar").addClass("fadeInRight");
+		$("#chat-bar").promise().done(function() {
+			setTimeout(function() {
+				$(".tool-icon").attr("data-flag", "hide");
+				$(".tool-inside").hide();
+
+				$(".tool-bar ul li:first-child div").attr("data-flag", "show");
+				$(".chat-time").html(getNowFormatDate(0));
+				$("#chat-bar").show();
+				$('.chat-content-area').prop('scrollTop', $('.chat-content-area')[0].scrollHeight);
+			}, 200)
+		})
 	}
 })
 
@@ -33,7 +47,7 @@ $(".bottomNavText").on("click", function(dom) {
  */
 function scrollToStuff() {
 	$('html , body').animate({
-		scrollTop: $('#stuffDetail').offset().top - 150
+		scrollTop: $('#stuffDetail .grid:first-child').offset().top - 150
 	}, 1000);
 }
 
@@ -67,7 +81,6 @@ function loadProperties(types) {
 $(window).scroll(function() {
 	//检测鼠标滚轮距离顶部位置
 	let top = document.documentElement.scrollTop || document.body.scrollTop;
-	let router = localStorage.getItem("router");
 	if (top > 0) {
 		$('.headerNav').addClass("headerNav_scroll");
 		$('.nav_title').addClass("nav_title_scroll");
@@ -81,7 +94,26 @@ $(window).scroll(function() {
 		$(".languageText").removeClass("languageTextScroll");
 		$(".navLogo").attr("src", "../asset/img/product_logo.png");
 	}
+	//浏览器当前窗口可视区域高度
+	let windowHeight = $(window).height();
+	if (top > 300) {
+		//显示回到顶部
+		$(".toTopAra").show();
+	} else {
+		$(".toTopAra").hide();
+	}
 });
+
+/**
+ * 回到顶部
+ */
+$(".toTopAra").on("click", function() {
+	$("html,body").animate({
+		scrollTop: "0px"
+	}, 500); //500毫秒完成回到顶部动画
+})
+
+
 
 /**
  * 验证字符串是否为空，返回自定义提示窗,输入框聚焦

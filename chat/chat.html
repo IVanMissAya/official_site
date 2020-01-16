@@ -16,7 +16,7 @@
 			<div class="row chat-box">
 				<!-- user-list -->
 				<div class="column chat-list-column">
-						
+
 				</div>
 				<!-- chat-tab-list -->
 				<div class="column chat-content-box">
@@ -43,10 +43,33 @@
 				<div class="msg-pop-box-receive">[msg]</div>
 			</div>
 		</script>
-		<!-- 发送消息模板 -->
+		<!-- 收到图片 -->
+		<script type="text/template" id="chat-msg-receive-pic">
+			<div class="row msg-box-receive">
+				<div class="msg-box-receive-icon">
+					<img src="../asset/img/chatIcon.png" />
+				</div>
+				<div class="msg-pop-box-receive">
+					<div class="chat-pic-module">
+						<img src="[src]" />
+					</div>
+				</div>
+			</div>
+		</script>
+		<!-- 发送文字消息模板 -->
 		<script type="text/template" id="chat-msg-send">
 			<div class="row msg-box-send">
 				<div class="msg-pop-box-send">[msg]</div>
+			</div>
+		</script>
+		<!-- 发送图片 -->
+		<script type="text/template" id="chat-msg-send-pic">
+			<div class="row msg-box-send">
+				<div class="msg-pop-box-send">
+				<div class="chat-pic-module">
+					<img src="[src]" />
+				</div>
+				</div>
 			</div>
 		</script>
 		<!-- 用户列表模板 -->
@@ -73,11 +96,11 @@
 		<script type="text/template" id="chat-tab-mudole">
 			<div id="[chat-tab-id]" class="chat-tab">
 				<div class="chat-top-box"><span>[chat-user-name]</span></div>
+				<!-- <div class="msg-tips">[chat-time]</div> -->
 				<div class="column msg-content-box">
-					
 				</div>
 				<div class="msg-send-card">
-					<div class="send-tools">
+					<!-- <div class="send-tools">
 						<ul>
 							<li>
 								<img src="../asset/img/emoji.png">
@@ -86,6 +109,10 @@
 								<img src="../asset/img/up-pic.png" style="width: 24px;">
 							</li>
 						</ul>
+					</div> -->
+					<input type="file" id="uploadPic-btn" style="display: none;"  accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" />
+					<div class="upload-pic">
+						<img src="../asset/img/up-pic.png" style="width: 22px;">
 					</div>
 					<div class="send-msg-box">
 						<textarea placeholder="点击输入内容..." id="[chat-area]"></textarea>

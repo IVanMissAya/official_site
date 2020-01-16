@@ -9,7 +9,6 @@
 		<meta http-equiv="Cache-Control" content="max-age=600" />
 		<link href="../../official/asset/layui/css/layui.css" rel="stylesheet" media="all" />
 		<link href="../../official/asset/css/animate.min.css" rel="stylesheet" />
-		<link href="../../official/asset/css/aos.css" rel="stylesheet" media="screen" />
 		<link href="../../official/asset/css/common.css" rel="stylesheet" media="screen" />
 		<link href="../../official/asset/css/header.css" rel="stylesheet" media="screen" />
 		<link href="../../official/asset/css/footer.css" rel="stylesheet" media="screen" />
@@ -22,18 +21,18 @@
 				<div class="headerNav">
 					<div class="row nav_title">
 						<div class="left_logo_area">
-							<img src="../asset/img/product_logo.png" class="logoIcon navLogo">
+							<a href="javascript:void(0)"><img src="../asset/img/product_logo.png" class="logoIcon navLogo"></a>
 						</div>
 						<div class="rightNavList">
 							<ul>
-								<li class="navLi  checkedNav" data-locale="home" data-index="home">HOME</li>
+								<li class="navLi  checkedNav" data-locale="home" data-index="home">Home</li>
 								<li class="navLine">|</li>
-								<li class="navLi" data-locale="products" data-index="product">PRODUCT</li>
+								<li class="navLi" data-locale="products" data-index="product">Agent Product</li>
 								<li class="navLine">|</li>
-								<!-- <li class="navLi" data-locale="contact" data-index="contact">CONTACT</li>
+								<!-- 	<li class="navLi" data-locale="contact" data-index="contact">联系我们</li>
 								<li class="navLine">|</li> -->
 								<li class="navSec">
-									<a href="../zh/index_zh.html" data-type="zh" class="languageText zh-option">中文</a>&nbsp;/&nbsp;
+									<a href="../zh/index_zh.html" data-type="zh" class="languageText zh-option ">中文</a>&nbsp;/&nbsp;
 									<a href="javascript:void(0)" data-type="en" class="languageText en-option checkStyle">EN</a>
 								</li>
 							</ul>
@@ -142,15 +141,16 @@
 						<ul>
 							<li class="hoverText bottomNavText" data-locale="home" data-index="home">Home</li>
 							<li class="bottomNavLine">|</li>
-							<li class="hoverText bottomNavText" data-locale="products" data-index="product">PRODUCTS</li>
-							<li class="bottomNavLine">|</li>
-							<li class="hoverText bottomNavText" data-locale="contact" data-index="contact">CONTACT</li>
+							<li class="hoverText bottomNavText" data-locale="products" data-index="product">Agent Product</li>
+							<!-- 	<li class="bottomNavLine">|</li>
+							<li class="hoverText bottomNavText" data-locale="contact" data-index="contact">Contact Us</li> -->
 						</ul>
 					</div>
 					<div class="column mentionArea">
-						<div class="addressText" data-locale="ADDRESS">ADDRESS:Cloud Computing Center Building</div>
-						<div class="emailText" data-locale="EMAIL">E-mail : sale@saf.com</div>
-						<div class="mobileText" data-locale="MOBILE">MOBILE:137-2478-6782</div>
+						<div class="contact_text">Contact Us</div>
+						<div class="addressText" data-locale="ADDRESS">ADDRESS : Cloud computing center of Chinese academy of sciences</div>
+						<div class="emailText" data-locale="EMAIL">EMAIL : sales@inteagle.com</div>
+						<div class="mobileText" data-locale="MOBILE">MOBILE : 137-2478-6782</div>
 					</div>
 				</div>
 			</div>
@@ -158,29 +158,29 @@
 		</div>
 		<div class="bottomLine"></div>
 		</div>
-		<a class="tb-link" href="https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-21564354018.10.364f1063IKuzkR&id=611592283140"
-		 target="_blank"><img src="../asset/img/tb.png" /></a>
+		<!-- <a class="tb-link" href="https://item.taobao.com/item.htm?spm=a1z10.3-c-s.w4002-21564354018.10.364f1063IKuzkR&id=611592283140"
+		 target="_blank"><img src="../asset/img/tb.png" /></a> -->
 		<div class="tool-bar">
 			<ul>
 				<li>
-					<div class="tool-icon">
+					<div class="tool-icon" style="border-top-left-radius: 5px;" data-index="0" data-flag="hide">
 						<img src="../asset/img/tool1.png" />
 					</div>
 				</li>
 				<li>
-					<div class="tool-icon">
+					<div class="tool-icon" data-index="1" data-flag="hide">
 						<img src="../asset/img/tool2.png" />
-						<div class="column phoneArea animated fadeInRight"><span>137-2478-6782</span></div>
+						<div class="column tool-inside phoneArea animated fadeInRight"><span>137-2478-6782</span></div>
 					</div>
 				</li>
 				<li>
-					<div class="tool-icon" style="border: none;">
+					<div class="tool-icon" style="border: none; border-bottom-left-radius: 5px;" data-index="2" data-flag="hide">
 						<img src="../asset/img/tool3.png" />
-						<div class="column qrcodeArea animated fadeInRight">
+						<div class="column tool-inside qrcodeArea animated fadeInRight">
 							<div class="sin-code-box">
 								<p>
 									<img src="../asset/img/codeArrow1.png" class="down-arrow-pic" />
-									扫码关注公众号
+									Scan code concern public number
 								</p>
 								<img src="../asset/img/qrcode.png" class="qr-pic" />
 							</div>
@@ -188,15 +188,77 @@
 					</div>
 				</li>
 			</ul>
+			<div class="animated toTopAra" id="toTop">
+				<img src="../asset/img/toTop.png" style="width: 23px;height: 23px;" />
+			</div>
 		</div>
+		<div class="column animated fadeInRight tool-inside chat-bar" id="chat-bar">
+			<div class="chat-title-text">
+				<ul>
+					<li>
+						<p>Inteagle Vision consulting</p>
+					</li>
+					<li>
+						<img src="../asset/img/sound.png">
+						<img src="../asset/img/small1.png" id="hide-chat" />
+					</li>
+				</ul>
+			</div>
 
+			<div class="column chat-content-area" id="chat-content-area">
+				<div class="chat-tip"><span class="chat-time"></span></div>
+				<div class="row msg-box-receive">
+					<div class="chat-icon"></div>
+					<div class="msg-content-card-receive">
+						<span>Hello, what can I do for you?We are at your service wholeheartedly. Please comment on my service after this
+							conversation.</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="send-card">
+				<div class="send-tools">
+					<ul>
+						<li>
+							<img src="../asset/img/emoji.png">
+						</li>
+						<li>
+							<img src="../asset/img/up-pic.png" style="width: 24px;">
+						</li>
+					</ul>
+				</div>
+				<div class="send-msg-box">
+					<textarea placeholder="Click enter..." id="msg-content"></textarea>
+				</div>
+				<div class="send-msg-bt">
+					<button type="button" class="layui-btn layui-btn-primary sendBtn">Send</button>
+				</div>
+			</div>
+		</div>
 		<script src="../../official/asset/layui/layui.js" type="text/javascript"></script>
 		<script src="../../official/asset/js/jquery-3.2.1.min.js" type="text/javascript"></script>
-		<script src="../../official/asset/js/aos.js" type="text/javascript"></script>
-		<!-- 加载语言包文件 -->
-		<script src="../../official/i18n/jquery.i18n.properties.js" type="text/javascript"></script>
 		<script src="../../official/asset/js/common.js" type="text/javascript"></script>
+		<script src="../asset/js/socketBase.js" type="text/javascript"></script>
+		<script src="../home/js/connectSocket.js" type="text/javascript"></script>
 		<script src="../../official/home/js/home.js" type="text/javascript"></script>
+		<script type="text/template" id="tips-module">
+			<div class="chat-tip"><span>[tips]</span></div>
+		</script>
+		<script type="text/template" id="chat-msg-receive">
+			<div class="row msg-box-receive">
+				<div class="chat-icon"></div>
+				<div class="msg-content-card-receive">
+					<span>[msg]</span>
+				</div>
+			</div>
+		</script>
+		<script type="text/template" id="chat-msg-send">
+			<div class="msg-box-send">
+				<div class="msg-wrap-send">
+					<span>[msg]</span>
+				</div>
+			</div>
+		</script>
 	</body>
 
 </html>

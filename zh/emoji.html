@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Emoji Demo</title>
+		<link href="../../official/asset/emoji/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+		<link href="../../official/asset/emoji/css/jquery.emoji.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="row firstRow">
+			<div class="col-md-6">
+				<h4>文本框 textarea</h4>
+				<button id="btn" class="btn btn-sm btn-default pull-right">:)</button>
+				<textarea class="form-control" id="content" rows="3"></textarea>
+				<div class="m-t-70">
+					<button class="btn btn-primary m-t-70" id="btnLoad1">初始化表情 init emoji</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../official/asset/emoji/js/jquery.min.js" type="text/javascript"></script>
+		<!--  -->
+		<!--[if gt IE 8]><!-->
+		<script src="../../official/asset/emoji/js/highlight.pack.js"></script>
+		<script>
+			hljs.initHighlightingOnLoad();
+		</script>
+		<!--<![endif]-->
+		<script src="../../official/asset/emoji/js/jquery.mousewheel-3.0.6.min.js"></script>
+		<script src="../../official/asset/emoji/js/jquery.mCustomScrollbar.min.js"></script>
+		<script src="../../official/asset/emoji/js/jquery.emoji.js"></script>
+		<script type="text/javascript">
+			
+			
+			$(function(){
+				$("#content").emoji({
+					showTab: false,
+					animation: 'fade',
+					icons: [{
+						name: "QQ高清",
+						path: "../../official/asset/emoji/img/qq/",
+						maxNum: 11,
+						excludeNums: [41, 45, 54],
+						file: ".gif",
+						placeholder: "#qq_{alias}#"
+					}]
+				});
+			})
+			
+			// $("#btnLoad1").click(function() {
+			// 	// $("#content").emoji({
+			// 	// 	showTab: false,
+			// 	// 	animation: 'fade',
+			// 	// 	icons: [{
+			// 	// 		name: "QQ高清",
+			// 	// 		path: "../../official/asset/emoji/img/qq/",
+			// 	// 		maxNum: 11,
+			// 	// 		excludeNums: [41, 45, 54],
+			// 	// 		file: ".gif",
+			// 	// 		placeholder: "#qq_{alias}#"
+			// 	// 	}]
+			// 	// });
+			// 	$("#content").emoji({
+			// 	    button: "#btn",
+			// 	    showTab: false,
+			// 	    animation: 'slide',
+			// 	    position: 'bottomRight',
+			// 	    icons: [{
+			// 	        name: "QQ表情",
+			// 	        path: "../../official/asset/emoji/img/qq/",
+			// 	        maxNum: 91,
+			// 	        excludeNums: [41, 45, 54],
+			// 	        file: ".gif"
+			// 	    }]
+			// 	});
+			// });
+			
+			
+		</script>
+	</body>
+</html>

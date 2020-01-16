@@ -22,11 +22,10 @@
 	background-repeat: no-repeat;
 }
 
-
-
 .chat-list-column {
 	width: 25%;
 	height: 100%;
+	overflow-y: auto;
 	background-color: #fff;
 }
 
@@ -150,7 +149,7 @@
 
 .send-msg-box {
 	width: 95%;
-	height: 60%;
+	height: 77.5%;
 	margin: 0px auto;
 	margin-top: 10px;
 }
@@ -168,8 +167,8 @@
 
 .send-msg-bt {
 	width: 95%;
-	height: 22%;
 	margin: 0px auto;
+	margin-top: 1%;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -237,6 +236,26 @@
 	background-color: #F5F5F5;
 }
 
+.layui-layedit-iframe iframe {
+	width: 100%;
+	height: 160px !important;
+}
+
+.layui-layedit-iframe iframe body {
+	min-height: 160px !important;
+}
+
+.upload-pic {
+	position: absolute;
+	top: 21px;
+	left: 75px;
+	cursor: pointer;
+}
+
+.chat-pic-module img {
+	width: 200px;
+}
+
 
 @media only screen and (min-width: 1400px) {
 	.chat-box {
@@ -264,6 +283,7 @@
 	.msg-send-card {
 		width: 100%;
 		height: 35%;
+		position: relative;
 		margin: 0px auto;
 		margin-top: 10px;
 		border-top: 1px solid #dcdcdc;
@@ -296,6 +316,7 @@
 	.msg-send-card {
 		width: 100%;
 		height: 48%;
+		position: relative;
 		margin: 0px auto;
 		margin-top: 10px;
 		border-top: 1px solid #dcdcdc;

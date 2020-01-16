@@ -2,8 +2,6 @@
  * 页面加载事件
  */
 $(function() {
-	//监听回车键事件
-	enterKeydown("chat-bar");
 })
 
 /**
@@ -12,7 +10,6 @@ $(function() {
 $(".tool-icon").on("click", function(dom) {
 	let index = dom.currentTarget.dataset.index,
 		flag = dom.currentTarget.dataset.flag;
-
 	$(".tool-icon").attr("data-flag", "hide");
 	if (flag == "show") {
 		$(".tool-inside").removeClass("fadeInRight");

@@ -20,8 +20,9 @@
 			<div class="navArea">
 				<div class="headerNav">
 					<div class="row nav_title">
-						<div class="left_logo_area">
-							<a href="javascript:void(0)"><img src="../asset/img/product_logo.png" class="logoIcon navLogo"></a>
+						<div class="row left_logo_area">
+							<a href="javascript:void(0)"><img src="../asset/img/product_logo.png" class="logoIcon navLogo" style="width: 70%;"></a>
+							<a href="https://inivation.com/" target="_blank"><img src="../asset/img/logo-e1565952580487.png" class="logoIcon" style="width: 60%;"></a>
 						</div>
 						<div class="rightNavList">
 							<ul>
@@ -129,6 +130,7 @@
 				</section>
 			</div>
 		</div>
+
 		<div class="bottomTip">
 			<div class="column tipArea">
 				<div class="logoTip">
@@ -140,17 +142,20 @@
 							<li class="hoverText bottomNavText" data-locale="home" data-index="home">首页</li>
 							<li class="bottomNavLine">|</li>
 							<li class="hoverText bottomNavText" data-locale="products" data-index="product">代理产品</li>
-							<li class="bottomNavLine">|</li>
-							<li class="hoverText bottomNavText" data-locale="contact" data-index="contact">联系我们</li>
+							<!-- <li class="bottomNavLine">|</li>
+							<li class="hoverText bottomNavText" data-locale="contact" data-index="contact">联系我们</li> -->
 						</ul>
 					</div>
 					<div class="column mentionArea">
+						<div class="contact_text">联系我们</div>
 						<div class="addressText" data-locale="ADDRESS">地址 : 中科院云计算中心</div>
 						<div class="emailText" data-locale="EMAIL">邮箱 : sales@inteagle.com</div>
 						<div class="mobileText" data-locale="MOBILE">联系电话 : 137-2478-6782</div>
 					</div>
 				</div>
 			</div>
+
+			<img src="" id="testImg" />
 			<div class="icpArea"><span>©2019版权所有 inteagle.<a style="color: #FFFFFF;" href="http://beian.miit.gov.cn" target="_blank">粤ICP备19045418号-1</a></span></div>
 		</div>
 		<div class="bottomLine"></div>
@@ -185,6 +190,11 @@
 					</div>
 				</li>
 			</ul>
+
+			<div class="animated toTopAra" id="toTop">
+				<img src="../asset/img/toTop.png" style="width: 23px;height: 23px;" />
+			</div>
+
 		</div>
 		<div class="column animated fadeInRight tool-inside chat-bar" id="chat-bar">
 			<div class="chat-title-text">
@@ -198,7 +208,7 @@
 					</li>
 				</ul>
 			</div>
-			
+
 			<div class="column chat-content-area" id="chat-content-area">
 				<div class="chat-tip"><span class="chat-time"></span></div>
 				<div class="row msg-box-receive">
@@ -207,21 +217,34 @@
 						<span>您好，请问有什么问题可以帮助您？我们全心为您服务，请会话结束以后对我服务给予评价。</span>
 					</div>
 				</div>
+
+
+
+
+
 			</div>
-			
 			<div class="send-card">
-				<div class="send-tools">
+				<!-- emoji -->
+				<!-- <div class="animated  emoji_box">
+					<ul class="emoji-container">
+					</ul>
+				</div> -->
+				<!-- <div class="send-tools">
 					<ul>
 						<li>
-							<img src="../asset/img/emoji.png">
+							<img src="../asset/img/emoji.png" data-flag="hidden" id="emojiBtn">
 						</li>
 						<li>
 							<img src="../asset/img/up-pic.png" style="width: 24px;">
 						</li>
 					</ul>
+				</div> -->
+				<input type="file" id="uploadPic-btn" style="display: none;" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" />
+				<div class="upload-pic">
+					<img src="../asset/img/up-pic.png" style="width: 22px;">
 				</div>
 				<div class="send-msg-box">
-					<textarea placeholder="点击输入内容..." id="msg-content"></textarea>
+					<textarea id="msg-content" placeholder="点击输入内容..."></textarea>
 				</div>
 				<div class="send-msg-bt">
 					<button type="button" class="layui-btn layui-btn-primary sendBtn">发送</button>
@@ -234,9 +257,12 @@
 		<script src="../asset/js/socketBase.js" type="text/javascript"></script>
 		<script src="../home/js/connectSocket.js" type="text/javascript"></script>
 		<script src="../../official/home/js/home.js" type="text/javascript"></script>
+		<!-- 模板 -->
+		<!-- 提示 -->
 		<script type="text/template" id="tips-module">
 			<div class="chat-tip"><span>[tips]</span></div>
 		</script>
+		<!-- 接收文字 -->
 		<script type="text/template" id="chat-msg-receive">
 			<div class="row msg-box-receive">
 				<div class="chat-icon"></div>
@@ -245,10 +271,32 @@
 				</div>
 			</div>
 		</script>
+		<!-- 接收图片 -->
+		<script type="text/template" id="chat-msg-receive-pic">
+			<div class="row msg-box-receive">
+				<div class="chat-icon"></div>
+				<div class="msg-content-card-receive">
+					<div class="send-pic">
+						<img src="[src]" />
+					</div>
+				</div>
+			</div>
+		</script>
+		<!-- 发送文字 -->
 		<script type="text/template" id="chat-msg-send">
 			<div class="msg-box-send">
 				<div class="msg-wrap-send">
 					<span>[msg]</span>
+				</div>
+			</div>
+		</script>
+		<!-- 发送图片 -->
+		<script type="text/template" id="chat-msg-send-pic">
+			<div class="msg-box-send">
+				<div class="msg-wrap-send">
+					<div class="send-pic">
+						<img src="[src]" />
+					</div>
 				</div>
 			</div>
 		</script>

@@ -7,6 +7,7 @@ var heartbeatPack = {
 const MSG_TYPE = {
 	"chatTab": "0",
 	"chatMsg": "1",
+	"chatPic": "2",
 	"msgRecord": "3"
 }
 
