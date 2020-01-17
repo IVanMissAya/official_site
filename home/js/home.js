@@ -34,9 +34,6 @@ $(".tool-icon").on("click", function(dom) {
 				case "1":
 					$(".phoneArea").show();
 					break;
-				case "2":
-					$(".qrcodeArea").show();
-					break;
 			}
 		})
 	}

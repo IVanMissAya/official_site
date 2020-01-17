@@ -51,7 +51,7 @@
 				</div>
 				<div class="msg-pop-box-receive">
 					<div class="chat-pic-module">
-						<img src="[src]" />
+						<img src="[src]" onclick="previewPic(this)"/>
 					</div>
 				</div>
 			</div>
@@ -67,7 +67,7 @@
 			<div class="row msg-box-send">
 				<div class="msg-pop-box-send">
 				<div class="chat-pic-module">
-					<img src="[src]" />
+					<img src="[src]" onclick="previewPic(this)"/>
 				</div>
 				</div>
 			</div>
@@ -100,18 +100,8 @@
 				<div class="column msg-content-box">
 				</div>
 				<div class="msg-send-card">
-					<!-- <div class="send-tools">
-						<ul>
-							<li>
-								<img src="../asset/img/emoji.png">
-							</li>
-							<li>
-								<img src="../asset/img/up-pic.png" style="width: 24px;">
-							</li>
-						</ul>
-					</div> -->
-					<input type="file" id="uploadPic-btn" style="display: none;"  accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" />
-					<div class="upload-pic">
+					<input type="file" id="[upbtn-id]" style="display: none;" data-index="[chat-tab-pic-input-id]" onchange="upPic(this)"  accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" />
+					<div class="upload-pic" data-index="[chat-tab-pic-id]" onclick="uploadPic(this)">
 						<img src="../asset/img/up-pic.png" style="width: 22px;">
 					</div>
 					<div class="send-msg-box">

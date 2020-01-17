@@ -10,9 +10,9 @@ if (getCookie("chatId")) {
 	setCookie("is-chat", "false", 1);
 }
 // 本地socket路径
-const wsServer = "ws://192.168.26.135:8080/client/" + chatId;
+// const wsServer = "ws://192.168.26.135:8080/client/" + chatId;
 // 服务器socket路径
-// const wsServer = "wss://www.inteagle.com.cn/inteagle-manage/client/" + chatId;
+const wsServer = "wss://www.inteagle.com.cn/inteagle-manage/client/" + chatId;
 if (typeof(WebSocket) == "undefined") {
 	console.log("您的浏览器不支持WebSocket");
 } else {
@@ -22,6 +22,7 @@ if (typeof(WebSocket) == "undefined") {
 	socket.connect(wsServer);
 	//socket消息处理
 	socket.writeScreen = function(res) {
+		// console.log("ws-res---------", res);
 		//历史消息
 		if (res.type === MSG_TYPE.msgRecord) {
 			//-----------发消息------
@@ -41,7 +42,26 @@ if (typeof(WebSocket) == "undefined") {
 					printPicMsg(res.msg, "receive");
 				}
 			}
+		} else {
+			//-----------发消息------
+			if (res.sendId === chatId) {
+				//文字消息
+				if (res.remark === MSG_TYPE.chatMsg) {
+					printModule(res.msg, "send");
+				} else if (res.remark === MSG_TYPE.chatPic) {
+					printPicMsg(res.msg, "send");
+				}
+			} else {
+				//-----------收消息-----------
+				//文字消息
+				if (res.remark === MSG_TYPE.chatMsg) {
+					printModule(res.msg, "receive");
+				} else if (res.remark === MSG_TYPE.chatPic) {
+					printPicMsg(res.msg, "receive");
+				}
+			}
 		}
+
 	};
 }
 
@@ -172,15 +192,12 @@ $(".upload-pic").on("click", function() {
  */
 $("#uploadPic-btn").on("change", function() {
 	let file = this.files[0];
-	console.log("file----", file);
-
 	if (file.size > (1024 * 1024)) {
 		layer.ready(function() {
 			layer.msg('上传图片大小不能超过1M!');
 		});
 		return;
 	}
-
 	var reader = new FileReader();
 	reader.readAsDataURL(this.files[0])
 	reader.onload = function(e) {
@@ -196,11 +213,39 @@ $("#uploadPic-btn").on("change", function() {
 				printTips("会话已被客服接起");
 				setCookie("is-chat", "true", 1);
 			}
+			$("#uploadPic-btn").attr("type", "text");
 			//打印图片消息
 			printPicMsg(file_base64, "send");
 			socket.ws.sendMsg(JSON.stringify(msg_obj));
+			$("#uploadPic-btn").attr("type", "file");
 		} else {
 			printTips("连接已断开...");
 		}
 	}
 })
+
+/**
+ * 预览图片
+ * @param {Object} dom
+ */
+function previewPic(dom) {
+	let imgArry = [],
+		imgSrc = $(dom).attr("src");
+	imgArry.push(imgSrc);
+	layer.photos({
+		photos: {
+			"title": "photo", //相册标题
+			"id": 1, //相册id
+			"start": 0, //初始显示的图片序号，默认0
+			"data": [ //相册包含的图片，数组格式
+				{
+					"alt": "photo",
+					"pid": 1, //图片id
+					"src": imgArry, //原图地址
+					"thumb": imgArry //缩略图地址
+				}
+			]
+		},
+		anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+	});
+}
