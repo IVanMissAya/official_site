@@ -46,7 +46,7 @@ $("#hide-chat").on("click", function() {
 	$("#chat-bar").addClass("fadeOutRight");
 	$("#chat-bar").promise().done(function() {
 		setTimeout(function() {
-			$(".tool-bar ul li:first-child div").attr("data-flag", "hide");
+			$(".tool-bar ul li:nth-child(2) div").attr("data-flag", "hide");
 			$("#chat-bar").hide();
 		}, 500)
 	})

@@ -238,7 +238,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-bottom: 40px;
 }
 
 .grid section {
@@ -362,7 +362,9 @@
 }
 
 .stuff-inside {
-	text-align: left;
+	display: inline-table;
+	width: 60%;
+	white-space: nowrap;
 }
 
 .sin-desc-box {
